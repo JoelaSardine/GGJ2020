@@ -338,7 +338,7 @@ MonoBehaviour:
   useFixedUpdate: 0
   dontDestroyOnLoad: 0
   customProfiles:
-  - CustomProfileExample.KeyboardAndMouseProfile
+  - Profiles.KeyboardOnly
 --- !u!4 &1345149047
 Transform:
   m_ObjectHideFlags: 0
@@ -612,10 +612,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1436345423609761820, guid: 212c4746110cbbf42a19d1932fce9f80,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6099612897063797935, guid: 212c4746110cbbf42a19d1932fce9f80,
         type: 3}
       propertyPath: m_Text
-      value: Player
+      value: Template
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035364336895589476, guid: 212c4746110cbbf42a19d1932fce9f80,
+        type: 3}
+      propertyPath: m_Name
+      value: Name
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 212c4746110cbbf42a19d1932fce9f80, type: 3}

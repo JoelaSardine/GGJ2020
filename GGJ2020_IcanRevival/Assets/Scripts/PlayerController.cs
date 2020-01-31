@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using InControl;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private const string INTERACTION_COLLIDER = "InteractionCollider";
 
 
-    public int playerNum;
+    public int playerId;
 
 
     private bool _movementEnabled = true;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private float interactionRange;
     private Collider2D interactionCollider;
+    private Text playerName;
 
     public InputDevice device;
     public string deviceMeta;
@@ -44,6 +46,8 @@ public class PlayerController : MonoBehaviour
 
         interactionCollider = transform.Find(INTERACTION_COLLIDER).GetComponent<Collider2D>();
         interactionRange = interactionCollider.transform.localPosition.magnitude;
+
+        playerName = transform.Find("Canvas").GetComponentInChildren<Text>();
     }
 
     private void Update()
@@ -60,7 +64,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void ManageInput()
+    private void ManageInput()
     {
         if (movementEnabled)
         {
@@ -104,5 +108,12 @@ public class PlayerController : MonoBehaviour
     {
         rigidbody.velocity = movingDirection * speed;
         interactionCollider.transform.localPosition = lookingDirection * interactionRange;
+    }
+
+    public void SetName(string n, int id)
+    {
+        playerId = id;
+        name = n;
+        playerName.text = n;
     }
 }

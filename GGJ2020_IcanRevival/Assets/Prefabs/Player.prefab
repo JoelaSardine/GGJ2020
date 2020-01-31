@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce35ac6b72b08ec4981e115810bfb17e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 0
+  playerId: 0
   speed: 5
   velocity: {x: 0, y: 0}
   movingDirection: {x: 0, y: 0}
@@ -278,7 +278,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1195962401882897094, guid: 1a3f6055e65025f4bae92884d1de627e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 4083442042896617546}
   - component: {fileID: 6099612897063797935}
   m_Layer: 5
-  m_Name: Player
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -540,4 +540,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player 1
+  m_Text: Player

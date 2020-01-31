@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using InControl;
+using System;
 
 public class PlayersManager : MonoBehaviour
 {
@@ -10,12 +11,17 @@ public class PlayersManager : MonoBehaviour
 
     public GameObject playerPrefab;
 
-    public List<PlayerController> players;
+    public List<PlayerController> players = new List<PlayerController>();
+    private List<bool> takenPlayerIds = new List<bool>();
 
     public int deviceCount = 1;
     public bool isBindingInputs = false;
 
     private List<PlayerController> playersToRemove = new List<PlayerController>();
+
+    private void Awake()
+    {
+    }
 
     private void Update()
     {
@@ -87,12 +93,30 @@ public class PlayersManager : MonoBehaviour
         PlayerController pc = go.GetComponent<PlayerController>();
         pc.device = device;
         pc.deviceMeta = device.Meta;
+        int id = GetPlayerId();
+        pc.SetName("player" + id, id);
 
         players.Add(pc);
     }
 
+    private int GetPlayerId()
+    {
+        int i = 0;
+        for (; i < takenPlayerIds.Count; i++)
+        {
+            if (!takenPlayerIds[i])
+            {
+                takenPlayerIds[i] = true;
+                return i;
+            }
+        }
+        takenPlayerIds.Add(true);
+        return i;
+    }
+
     private void RemovePlayer(PlayerController player)
     {
+        takenPlayerIds[player.playerId] = false;
         Destroy(player.gameObject);
         players.Remove(player);
     }

@@ -19,7 +19,7 @@ namespace InControl
 		{
 			if (!CheckAxisPresets())
 			{
-				Debug.LogError( productName + " has detected invalid InputManager settings. To fix, execute 'Edit > Project Settings > " + productName + " > Setup InputManager Settings'." );
+				Debug.LogError( productName + " has detected invalid InputManager settings. To fix, execute '"+ productName + " > Setup InputManager Settings'." );
 			}
 		}
 

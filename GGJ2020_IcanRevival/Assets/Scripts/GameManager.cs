@@ -2,17 +2,60 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum GamePhase { None, Game, Lobby }
+
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static GameManager Instance;
+
+    public Color[] PlayerColors = new Color[] {
+        Color.blue, Color.red, Color.green, Color.yellow
+    };
+    public GamePhase gamePhase = GamePhase.None;
+    public PlayersManager playersManager;
+    public LobbyManager lobbyManager;
+
+    private void Awake()
     {
-        
+        if (GameManager.Instance != null)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Init();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Init()
     {
+        GameManager.Instance = this;
         
+        ChangePhase(gamePhase);
+    }
+
+    private void ChangePhase(GamePhase newPhase)
+    {
+        switch (newPhase)
+        {
+            case GamePhase.Game:
+                break;
+
+            case GamePhase.Lobby:
+                if (lobbyManager == null || playersManager == null)
+                {
+                    Debug.LogError("Please link LobbyManager and PlayersManager !");
+                    return;
+                }
+                lobbyManager.Init();
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    private void Update()
+    {
     }
 }

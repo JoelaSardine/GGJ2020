@@ -6,9 +6,6 @@ using System;
 
 public class PlayersManager : MonoBehaviour
 {
-    public enum State { Home, InGame, Rebind }
-    public State state = State.Home;
-
     public GameObject playerPrefab;
 
     public List<PlayerController> players = new List<PlayerController>();
@@ -25,16 +22,12 @@ public class PlayersManager : MonoBehaviour
 
     private void Update()
     {
-        switch (state)
+        switch (GameManager.Instance.gamePhase)
         {
-            case State.Home:
-                UpdateHome();
+            case GamePhase.Lobby:
+                UpdateLobby();
                 break;
-            case State.InGame:
-                UpdateInGame();
-                break;
-            case State.Rebind:
-                UpdateRebind();
+            default:
                 break;
         }
 
@@ -44,7 +37,10 @@ public class PlayersManager : MonoBehaviour
         }
     }
 
-    private void UpdateHome()
+    /// <summary>
+    /// Link devices to players
+    /// </summary>
+    private void UpdateLobby()
     {
         foreach (var device in InputManager.Devices)
         {
@@ -89,16 +85,29 @@ public class PlayersManager : MonoBehaviour
 
     private void CreateNewPlayer(InputDevice device)
     {
-        GameObject go = Instantiate(playerPrefab, transform, true);
+        int id = GetPlayerId();
+
+        PlayerZone lobbyZone = GameManager.Instance.lobbyManager.playersZones[id];
+        GameObject go = Instantiate(playerPrefab, lobbyZone.spawnPos, Quaternion.identity, transform);
         PlayerController pc = go.GetComponent<PlayerController>();
         pc.device = device;
         pc.deviceMeta = device.Meta;
-        int id = GetPlayerId();
         pc.SetName("player" + id, id);
+        lobbyZone.Enable(pc);
 
         players.Add(pc);
     }
 
+    private void RemovePlayer(PlayerController player)
+    {
+        PlayerZone lobbyZone = GameManager.Instance.lobbyManager.playersZones[player.playerId];
+        lobbyZone.Enable(null);
+
+        takenPlayerIds[player.playerId] = false;
+        Destroy(player.gameObject);
+        players.Remove(player);
+    }
+    
     private int GetPlayerId()
     {
         int i = 0;
@@ -112,12 +121,5 @@ public class PlayersManager : MonoBehaviour
         }
         takenPlayerIds.Add(true);
         return i;
-    }
-
-    private void RemovePlayer(PlayerController player)
-    {
-        takenPlayerIds[player.playerId] = false;
-        Destroy(player.gameObject);
-        players.Remove(player);
     }
 }

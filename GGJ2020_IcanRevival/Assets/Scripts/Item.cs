@@ -6,9 +6,12 @@ using UnityEngine.UI;
 public enum ItemType
 {
     None,
-    Wrench,
+    Medication,
     Seringe,
-    Patient,
+    SupositoirChimioterapique,
+    Defibrilateur,
+    Sang
+    
 }
 
 public class Item : Interactable

@@ -173,7 +173,7 @@ MonoBehaviour:
   MoveSpeed: 2.5
   AvoidRadius: 0.8
   Health: 3
-  HealthDecreaseSpeed: 10
+  HealthDecreaseSpeed: 35
   sickness:
     name: 0
     cure: 0

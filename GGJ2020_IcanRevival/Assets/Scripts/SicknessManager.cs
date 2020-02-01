@@ -11,6 +11,8 @@ public enum SicknessType
     CancerDuCul,
     Coronavirus,
     FlemmingiteAigue,
+    CriseCardiaque,
+    PriseDeSang,
 }
 
 [Serializable]

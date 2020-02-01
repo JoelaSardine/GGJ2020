@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadZoneSquared: 0.1
-  movementForce: 2.5
+  movementForce: 5
   throwForce: 2
   throwTime: 0.2
   playerId: 0

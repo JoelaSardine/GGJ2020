@@ -22,7 +22,7 @@ AnimationClip:
     - time: 0
       value: {fileID: 2100000, guid: 546ca32b0e5016a4ba41fe98cce2c943, type: 2}
     attribute: m_Materials.Array.data[0]
-    path: 
+    path: Neck/Head
     classID: 23
     script: {fileID: 0}
   m_SampleRate: 60
@@ -33,7 +33,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 3576427886
       attribute: 0
       script: {fileID: 0}
       typeID: 23

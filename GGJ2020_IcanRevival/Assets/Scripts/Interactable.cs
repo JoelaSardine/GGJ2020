@@ -51,14 +51,22 @@ public class Interactable : MonoBehaviour
         rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 
-    public void Drop(PlayerController player)
+    public void Drop()
     {
+        Batman(holder.holded.transform);
+        holder.holded = null;
         holder = null;
         isHolded = false;
 
         collider.isTrigger = false;
         rigidbody.isKinematic = false;
         rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+    }
+
+    /// <summary>Helper function that kill all parents of the target</summary>
+    private void Batman(Transform target)
+    {
+        target.parent = null;
     }
 
     public IEnumerator ThrowCoroutine(PlayerController player)

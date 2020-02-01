@@ -30,4 +30,10 @@ public class Machine : Interactable
             Debug.Log("Type equal = false");
         }
     }
+
+    public virtual void Interact(PlayerController player)
+    {
+
+    }
+
 }

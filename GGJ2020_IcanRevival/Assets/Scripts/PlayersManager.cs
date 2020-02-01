@@ -33,7 +33,7 @@ public class PlayersManager : MonoBehaviour
                 {
                     int id = i;
                     Vector3 spawn = levelManager.spawns[id].position;
-                    GameObject go = Instantiate(playerPrefab, spawn, Quaternion.identity, transform);
+                    GameObject go = Instantiate(playerPrefab, spawn, Quaternion.Euler(90,0,0), transform);
                     PlayerController pc = go.GetComponent<PlayerController>();
                     pc.device = InputManager.Devices[id];
                     pc.deviceMeta = pc.device.Meta;
@@ -115,7 +115,7 @@ public class PlayersManager : MonoBehaviour
         int id = GetPlayerId();
 
         PlayerZone lobbyZone = GameManager.Instance.lobbyManager.playersZones[id];
-        GameObject go = Instantiate(playerPrefab, lobbyZone.spawnPos, Quaternion.identity, transform);
+        GameObject go = Instantiate(playerPrefab, lobbyZone.spawnPos, Quaternion.Euler(90, 0, 0), transform);
         PlayerController pc = go.GetComponent<PlayerController>();
         pc.device = device;
         pc.deviceMeta = device.Meta;

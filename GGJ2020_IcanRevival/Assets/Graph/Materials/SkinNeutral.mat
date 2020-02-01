@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Skin03
+  m_Name: SkinNeutral
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 0
@@ -73,5 +73,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.4339623, g: 0.41451585, b: 0.39506945, a: 1}
-    - _EmissionColor: {r: 0.15896086, g: 0.1441285, b: 0.13013652, a: 1}
+    - _Color: {r: 0.735849, g: 0.5605643, b: 0.38527945, a: 1}
+    - _EmissionColor: {r: 0.5849056, g: 0.32509875, b: 0.26210395, a: 1}

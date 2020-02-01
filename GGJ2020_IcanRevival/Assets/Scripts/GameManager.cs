@@ -23,12 +23,17 @@ public class GameManager : MonoBehaviour
             if (lobbyManager)
                 GameManager.Instance.lobbyManager = lobbyManager;
             if (levelManager)
+            {
                 GameManager.Instance.levelManager = levelManager;
+                levelManager.Init();
+            }
+
+
 
             if (playersManager)
-                Destroy(playersManager);
+                Destroy(playersManager.gameObject);
             
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {
@@ -45,21 +50,23 @@ public class GameManager : MonoBehaviour
         if (!playersManager.isInitialized)
         {
             playersManager.Init();
+            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(playersManager.gameObject);
         }
     }
 
-    private void ChangePhase(GamePhase newPhase)
+    public void ChangePhase(GamePhase newPhase)
     {
         gamePhase = newPhase;
         switch (newPhase)
         {
             case GamePhase.Game:
-                if (levelManager == null || playersManager == null)
-                {
-                    Debug.LogError("Please link LevelManager and PlayersManager !");
-                    return;
-                }
-                levelManager.Init();
+                /* if (levelManager == null || playersManager == null)
+                 {
+                     Debug.LogError("Please link LevelManager and PlayersManager !");
+                     return;
+                 }
+                 levelManager.Init();*/
                 break;
 
             case GamePhase.Lobby:

@@ -298,6 +298,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5731964767519098520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438155810844467605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51af4c5c19fe9a446af12a713f1a4a6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  worldObjectToFollow: {fileID: 1436345422116101423}
+  offset: {x: 0, y: 60, z: 0}
 --- !u!1 &2701097055486480324
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +787,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7f622b1fc613024b8c98e7f080b5a8c, type: 3}
+--- !u!1 &1438155810844467605 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6119014794378581637, guid: c7f622b1fc613024b8c98e7f080b5a8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5124604473465370384}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4911220402810385254 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 231487267618554998, guid: c7f622b1fc613024b8c98e7f080b5a8c,

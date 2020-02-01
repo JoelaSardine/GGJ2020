@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     public Vector2 lookingDirection = Vector2.zero;
 
     private new Rigidbody2D rigidbody;
-    private Animator animator;
+    public Animator animator;
     private float interactionRange;
     private Collider2D interactionCollider;
     private TextMeshProUGUI playerName;
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         miniGame = transform.Find("Canvas").GetComponentInChildren<Minigame>();
 
         interactionCollider = transform.Find(INTERACTION_COLLIDER).GetComponent<Collider2D>();
@@ -147,7 +147,10 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         rigidbody.AddForce(movingDirection * movementForce * 100);
-        interactionCollider.transform.localPosition = lookingDirection * interactionRange;
+
+        this.transform.LookAt(new Vector3(this.transform.position.x + lookingDirection.x, this.transform.position.y + lookingDirection.y, this.transform.position.z), Vector3.forward);
+
+        //interactionCollider.transform.localPosition = lookingDirection * interactionRange;
     }
 
     private void OnGrabButton(bool isDown)

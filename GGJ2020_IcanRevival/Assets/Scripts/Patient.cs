@@ -14,14 +14,15 @@ public class Patient : Interactable
     public Vector2? moveTarget;
 
     private bool healed;
-    private Animator animator;
+    public Animator animator;
     private Rigidbody2D rb;
     public ContactFilter2D avoidMask;
     private float timer = 0;
 
+
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         avoidMask = new ContactFilter2D();
         avoidMask.useLayerMask = true;

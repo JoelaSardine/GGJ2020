@@ -9,9 +9,6 @@ public class HealingMachine : Interactable
     public override void InteractWithItem(Interactable itemHolded)
     {
         Patient patient = itemHolded as Patient;
-        if (patient?.sickness.TryCure(cure) ?? false)
-        {
-            patient.ChangeHealth(3);
-        }
+        if(patient?.enabled ?? false) patient?.sickness.TryCure(cure, itemHolded.holder);
     }
 }

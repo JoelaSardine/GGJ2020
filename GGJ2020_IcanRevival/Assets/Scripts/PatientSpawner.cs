@@ -32,7 +32,9 @@ public class PatientSpawner : MonoBehaviour
         {
             Patient patient = Instantiate(PatientPrefab, transform.position, Quaternion.identity, Container).GetComponent<Patient>();
             patient.sickness = sicknessManager.GetRandomsickness();
+            patient.sickness.OnCure.AddListener(() => patient.ChangeHealth(3));
             patient.moveTarget = TargetFinder?.GetTarget();
+            
             spawnCount++;
 
             if(spawnCount >= MaxPatientSpawn)

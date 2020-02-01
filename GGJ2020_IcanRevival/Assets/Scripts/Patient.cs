@@ -11,7 +11,6 @@ public class Patient : Interactable
     public float HealthDecreaseSpeed = 10;
     public Sickness sickness; 
 
-
     public Vector2? moveTarget;
 
     private bool healed;
@@ -45,12 +44,9 @@ public class Patient : Interactable
     {
         Item item = itemHolded as Item;
 
-        if (itemHolded != null)
+        if (itemHolded != null && enabled)
         {
-            if (sickness.TryCure(item.type))
-            {
-                ChangeHealth(3);
-            }
+            sickness.TryCure(item.type, itemHolded.holder);
         }
     }
 
@@ -97,6 +93,8 @@ public class Patient : Interactable
 
     public void ChangeHealth(int newHealth)
     {
+        if (Health == 0) return;
+
         Health = newHealth;
         animator.SetInteger("Life", Health);
 

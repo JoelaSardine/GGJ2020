@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     
     private bool _movementEnabled = true;
     public bool movementEnabled {
-        get { return _movementEnabled; }
+        get { return _movementEnabled && !miniGame.enabled; }
         set {
             rigidbody.velocity = Vector2.zero;
             animator.SetBool("Moving", false);
@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
     private float interactionRange;
     private Collider2D interactionCollider;
     private TextMeshProUGUI playerName;
+    [HideInInspector] public Minigame miniGame;
 
     public InputDevice device;
     public string deviceMeta;
@@ -58,9 +59,11 @@ public class PlayerController : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        miniGame = transform.Find("Canvas").GetComponentInChildren<Minigame>();
 
         interactionCollider = transform.Find(INTERACTION_COLLIDER).GetComponent<Collider2D>();
         interactionRange = interactionCollider.transform.localPosition.magnitude;
+        //miniGame.enabled = false;
 
         playerName = transform.Find("Canvas").GetComponentInChildren<TextMeshProUGUI>();
     }
@@ -81,6 +84,8 @@ public class PlayerController : MonoBehaviour
 
     private void ManageInput()
     {
+        if (device.Action3 && miniGame.enabled) miniGame.ReceiveInput(true);
+
         if (device.Action1 != inputStatus[inputName.Grab])
         {
             inputStatus[inputName.Grab] = device.Action1;
@@ -152,6 +157,12 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
+        if (miniGame.enabled)
+        {
+            miniGame.enabled = false;
+            return;
+        }
+
         // Grab / Drop
 
         if (holded != null)
@@ -184,6 +195,12 @@ public class PlayerController : MonoBehaviour
     {
         if (!isDown)
         {
+            return;
+        }
+
+        if (miniGame.enabled)
+        {
+            miniGame.ReceiveInput(false);
             return;
         }
 

@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    public enum inputName {
+        Grab,
+        Use
+    };
+
     private const string INPUT_AXIS_HORIZONTAL = "Horizontal";
     private const string INPUT_AXIS_VERTICAL = "Vertical";
     private const string INTERACTION_COLLIDER = "InteractionCollider";
@@ -40,9 +45,13 @@ public class PlayerController : MonoBehaviour
     public string deviceMeta;
 
     public List<Interactable> hoveredList = new List<Interactable>();
-    public Interactable hovered 
-        { get { return hoveredList.Count > 0 ? hoveredList[0] : null; } }
+    public Interactable hovered { get { return hoveredList.Count > 0 ? hoveredList[0] : null; } }
     public Interactable holded;
+
+    public Dictionary<inputName, bool> inputStatus = new Dictionary<inputName, bool> {
+        { inputName.Grab, false },
+        { inputName.Use, false }
+    };
 
     private void Awake()
     {
@@ -71,9 +80,15 @@ public class PlayerController : MonoBehaviour
 
     private void ManageInput()
     {
-        if (device.Action1)
+        if (device.Action1 != inputStatus[inputName.Grab])
         {
-
+            inputStatus[inputName.Grab] = device.Action1;
+            OnGrabButton(inputStatus[inputName.Grab]);
+        }
+        if (device.Action3 != inputStatus[inputName.Use])
+        {
+            inputStatus[inputName.Use] = device.Action3;
+            OnUseButton(inputStatus[inputName.Use]);
         }
 
         if (movementEnabled)
@@ -120,6 +135,36 @@ public class PlayerController : MonoBehaviour
         interactionCollider.transform.localPosition = lookingDirection * interactionRange;
     }
 
+    private void OnGrabButton(bool isDown)
+    {
+        if (!isDown)
+        {
+            return;
+        }
+
+        // Grab / Drop
+
+        if (holded != null)
+        {
+            holded.Drop(this);
+
+            holded.transform.parent = null;
+        }
+
+        if (hovered != null && hovered.isGrabbable)
+        {
+            hovered.Hover(false);
+            hovered.Grab(this);
+            holded = hovered;
+            hoveredList.Remove(holded);
+
+            holded.transform.SetParent(interactionCollider.transform);
+            holded.transform.localPosition = Vector3.zero;
+        }
+    }
+
+    private void OnUseButton(bool isDown) { }
+
     public void SetName(string n, int id)
     {
         playerId = id;
@@ -130,7 +175,7 @@ public class PlayerController : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         Interactable interactable = collision.GetComponent<Interactable>();
-        if (interactable != null)
+        if (interactable != null && interactable.holder != this)
         {
             hoveredList.Add(interactable);
 
@@ -144,7 +189,7 @@ public class PlayerController : MonoBehaviour
     public void OnTriggerExit2D(Collider2D collision)
     {
         Interactable interactable = collision.GetComponent<Interactable>();
-        if (interactable != null)
+        if (interactable != null && interactable.holder != this)
         {
             if (interactable == hovered)
             {

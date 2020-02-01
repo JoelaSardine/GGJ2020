@@ -89,7 +89,7 @@ public class PlayersManager : MonoBehaviour
 
     private void CreateNewPlayer(InputDevice device)
     {
-        GameObject go = Instantiate(playerPrefab);
+        GameObject go = Instantiate(playerPrefab, transform, true);
         PlayerController pc = go.GetComponent<PlayerController>();
         pc.device = device;
         pc.deviceMeta = device.Meta;

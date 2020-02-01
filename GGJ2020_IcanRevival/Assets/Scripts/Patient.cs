@@ -13,7 +13,7 @@ public class Patient : Interactable
 
     public Vector2? moveTarget;
 
-    private bool healed;
+    [HideInInspector] public bool healed;
     public Animator animator;
     private Rigidbody2D rb;
     public ContactFilter2D avoidMask;
@@ -53,7 +53,7 @@ public class Patient : Interactable
     {
         Item item = itemHolded as Item;
 
-        if (itemHolded != null && enabled)
+        if (itemHolded != null && enabled && !healed)
         {
             sickness.TryCure(item.type, itemHolded.holder);
         }

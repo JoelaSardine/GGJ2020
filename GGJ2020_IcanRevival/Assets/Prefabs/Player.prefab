@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1436345422116101422}
   - component: {fileID: 1436345422116101420}
   - component: {fileID: 1436345422116101421}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 1436345423384189425}
   - component: {fileID: 1436345423384189422}
   - component: {fileID: 4191971785432967205}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: InteractionCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1436345423609761821}
   - component: {fileID: 1436345423609761818}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 2148357111548446226}
   - component: {fileID: 3163689050574511382}
   - component: {fileID: 7637084214304961434}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 7059292032842753076}
   - component: {fileID: 7324290617916603795}
   - component: {fileID: 4335786702498982781}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 6220920791034082379}
   - component: {fileID: 4083442042896617546}
   - component: {fileID: 6099612897063797935}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}

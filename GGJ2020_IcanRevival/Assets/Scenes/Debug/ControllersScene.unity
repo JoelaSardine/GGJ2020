@@ -121,6 +121,80 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &84206178
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2672502543896085734, guid: 365eaccf03d40744fa7b94686e719f83,
+        type: 3}
+      propertyPath: m_Text
+      value: Template patient
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088212774045424998, guid: 365eaccf03d40744fa7b94686e719f83,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088212774045424998, guid: 365eaccf03d40744fa7b94686e719f83,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088212774045424998, guid: 365eaccf03d40744fa7b94686e719f83,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088212774045424998, guid: 365eaccf03d40744fa7b94686e719f83,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088212774045424998, guid: 365eaccf03d40744fa7b94686e719f83,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088212774045424998, guid: 365eaccf03d40744fa7b94686e719f83,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088212774045424998, guid: 365eaccf03d40744fa7b94686e719f83,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088212774045424998, guid: 365eaccf03d40744fa7b94686e719f83,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088212774045424998, guid: 365eaccf03d40744fa7b94686e719f83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088212774045424998, guid: 365eaccf03d40744fa7b94686e719f83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088212774045424998, guid: 365eaccf03d40744fa7b94686e719f83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088212774045425017, guid: 365eaccf03d40744fa7b94686e719f83,
+        type: 3}
+      propertyPath: m_Name
+      value: Patient
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 365eaccf03d40744fa7b94686e719f83, type: 3}
 --- !u!1 &295966539
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +465,7 @@ RectTransform:
   m_Children:
   - {fileID: 1762951141}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -496,7 +570,7 @@ Transform:
   m_Children:
   - {fileID: 508007301}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1531226991
 SpriteRenderer:
@@ -595,7 +669,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1668779224
 GameObject:
@@ -750,12 +824,12 @@ PrefabInstance:
     - target: {fileID: 1436345422116101423, guid: 212c4746110cbbf42a19d1932fce9f80,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 1436345422116101423, guid: 212c4746110cbbf42a19d1932fce9f80,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1436345422116101423, guid: 212c4746110cbbf42a19d1932fce9f80,
         type: 3}
@@ -815,7 +889,9 @@ PrefabInstance:
     - target: {fileID: 6099612897063797935, guid: 212c4746110cbbf42a19d1932fce9f80,
         type: 3}
       propertyPath: m_Text
-      value: Template
+      value: 'Template
+
+        Player'
       objectReference: {fileID: 0}
     - target: {fileID: 9035364336895589476, guid: 212c4746110cbbf42a19d1932fce9f80,
         type: 3}

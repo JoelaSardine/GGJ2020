@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Patient : Machine
+public class Patient : Interactable
 {
     public float MoveSpeed;
     public float AvoidRadius;
     public int Health = 3;
     public float HealthDecreaseSpeed = 10;
-    public Sickness sickness;
+    public Sickness sickness; 
+
 
     public Vector2? moveTarget;
 
@@ -48,7 +49,7 @@ public class Patient : Machine
         {
             if (sickness.TryCure(item.type))
             {
-                ChangeHealth(Health + 1);
+                ChangeHealth(3);
             }
         }
     }

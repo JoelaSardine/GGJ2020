@@ -30,6 +30,16 @@ public class Interactable : MonoBehaviour
     {
     }
 
+    public virtual void InteractWithItem(Interactable itemHolded)
+    {
+
+    }
+
+    public virtual void Interact(PlayerController player)
+    {
+
+    }
+
     public virtual void Hover(bool state)
     {
         hovering += state ? 1 : -1;

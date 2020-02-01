@@ -252,9 +252,11 @@ MonoBehaviour:
   AvoidRadius: 0.8
   Health: 3
   HealthDecreaseSpeed: 10
-  Sickness: CancerDuCul
+  sickness:
+    name: 0
+    cure: 0
   avoidMask:
-    useTriggers: 1
+    useTriggers: 0
     useLayerMask: 1
     useDepth: 0
     useOutsideDepth: 0

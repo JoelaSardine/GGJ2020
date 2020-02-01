@@ -12,6 +12,14 @@ public enum SicknessType
     FlemmingiteAigue,
 }
 
+public enum CureMiniGame
+{
+    None,
+    Rythm,
+    Mash,
+    Hold,
+}
+
 [Serializable]
 public class Sickness
 {

@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Interactable : MonoBehaviour
 {
-    protected Text label;
+    protected TextMeshProUGUI label;
 
     public int hovering = 0;
     
@@ -19,7 +20,7 @@ public class Interactable : MonoBehaviour
 
     private void Awake()
     {
-        label = GetComponentInChildren<Text>();
+        label = GetComponentInChildren<TextMeshProUGUI>();
         UpdateHoverStatus();
 
         rigidbody = GetComponent<Rigidbody2D>();

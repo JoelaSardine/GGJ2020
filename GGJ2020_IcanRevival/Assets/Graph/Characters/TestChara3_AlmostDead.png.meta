@@ -1,0 +1,667 @@
+fileFormatVersion: 2
+guid: adcb0de6725486c4994f61761f66129b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7042854391759459219
+    second: TestChara3_AlmostDead_0
+  - first:
+      213: -1723469317613336496
+    second: TestChara3_AlmostDead_1
+  - first:
+      213: -1603587428116872803
+    second: TestChara3_AlmostDead_2
+  - first:
+      213: 9201336370338309099
+    second: TestChara3_AlmostDead_3
+  - first:
+      213: -527666207478932430
+    second: TestChara3_AlmostDead_4
+  - first:
+      213: 8793157220781288782
+    second: TestChara3_AlmostDead_5
+  - first:
+      213: 8760959537104891644
+    second: TestChara3_AlmostDead_6
+  - first:
+      213: 2437302741761961688
+    second: TestChara3_AlmostDead_7
+  - first:
+      213: 8617842421466966843
+    second: TestChara3_AlmostDead_8
+  - first:
+      213: -5147264970698253153
+    second: TestChara3_AlmostDead_9
+  - first:
+      213: 4939480924157697246
+    second: TestChara3_AlmostDead_10
+  - first:
+      213: -7190827522897561162
+    second: TestChara3_AlmostDead_11
+  - first:
+      213: 4165531687609446635
+    second: TestChara3_AlmostDead_12
+  - first:
+      213: -4400519255451112176
+    second: TestChara3_AlmostDead_13
+  - first:
+      213: -2956768123630000249
+    second: TestChara3_AlmostDead_14
+  - first:
+      213: -1613695292596844714
+    second: TestChara3_AlmostDead_15
+  - first:
+      213: -2224781404839238392
+    second: TestChara3_AlmostDead_16
+  - first:
+      213: -5084309148710725485
+    second: TestChara3_AlmostDead_17
+  - first:
+      213: -34731166271663256
+    second: TestChara3_AlmostDead_18
+  - first:
+      213: 567434010457104562
+    second: TestChara3_AlmostDead_19
+  - first:
+      213: 1374346332614914209
+    second: TestChara3_AlmostDead_20
+  - first:
+      213: -6821806909915079564
+    second: TestChara3_AlmostDead_21
+  - first:
+      213: 470502514847389552
+    second: TestChara3_AlmostDead_22
+  - first:
+      213: 5111521305748600318
+    second: TestChara3_AlmostDead_23
+  - first:
+      213: 2980231101011360841
+    second: TestChara3_AlmostDead_24
+  - first:
+      213: 5661150210680956542
+    second: TestChara3_AlmostDead_25
+  - first:
+      213: -7152454409748364030
+    second: TestChara3_AlmostDead_26
+  - first:
+      213: -921765680367752631
+    second: TestChara3_AlmostDead_27
+  - first:
+      213: -8731000051090148040
+    second: TestChara3_AlmostDead_0
+  - first:
+      213: 2565896918846066593
+    second: TestChara3_AlmostDead_1
+  - first:
+      213: 2614475294062090366
+    second: TestChara3_AlmostDead_2
+  - first:
+      213: -8365017677360484498
+    second: TestChara3_AlmostDead_3
+  - first:
+      213: 7893096388554772584
+    second: TestChara3_AlmostDead_4
+  - first:
+      213: -9217605327639886760
+    second: TestChara3_AlmostDead_5
+  - first:
+      213: -2513888551378551592
+    second: TestChara3_AlmostDead_6
+  - first:
+      213: -8062329017528584931
+    second: TestChara3_AlmostDead_7
+  - first:
+      213: -2334491865715955412
+    second: TestChara3_AlmostDead_8
+  - first:
+      213: -7375224236114178975
+    second: TestChara3_AlmostDead_9
+  - first:
+      213: 858866792887970274
+    second: TestChara3_AlmostDead_10
+  - first:
+      213: 5481873705652687155
+    second: TestChara3_AlmostDead_11
+  - first:
+      213: -9005470945950179369
+    second: TestChara3_AlmostDead_12
+  - first:
+      213: 322236985245385049
+    second: TestChara3_AlmostDead_13
+  - first:
+      213: -9107059607532314970
+    second: TestChara3_AlmostDead_14
+  - first:
+      213: 2570808375196061867
+    second: TestChara3_AlmostDead_15
+  - first:
+      213: 6676836299297551422
+    second: TestChara3_AlmostDead_16
+  - first:
+      213: -2120345462697185090
+    second: TestChara3_AlmostDead_17
+  - first:
+      213: -2007002086970738131
+    second: TestChara3_AlmostDead_18
+  - first:
+      213: -6982486181709578600
+    second: TestChara3_AlmostDead_19
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835badc56b145d680800000000000000
+      internalID: -8731000051090148040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1afc61a27a5eb9320800000000000000
+      internalID: 2565896918846066593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 24
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e781b988d6b784420800000000000000
+      internalID: 2614475294062090366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_3
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 24
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6fa0110ebc79eb80800000000000000
+      internalID: -8365017677360484498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_4
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 24
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860d9b19859e98d60800000000000000
+      internalID: 7893096388554772584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_5
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 24
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854c64e9acc741080800000000000000
+      internalID: -9217605327639886760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 24
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dcf8228eafdc1dd0800000000000000
+      internalID: -2513888551378551592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 24
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1572ef797adc1090800000000000000
+      internalID: -8062329017528584931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_8
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 24
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2926fc44083a9fd0800000000000000
+      internalID: -2334491865715955412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_9
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 24
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c009302a0f5a990800000000000000
+      internalID: -7375224236114178975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e967733cce4beb00800000000000000
+      internalID: 858866792887970274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_11
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3319bf05717831c40800000000000000
+      internalID: 5481873705652687155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_12
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfd98f33e3260380800000000000000
+      internalID: -9005470945950179369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_13
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 0
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9514b0fa4d0d87400800000000000000
+      internalID: 322236985245385049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_14
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae5ab8c9893d9180800000000000000
+      internalID: -9107059607532314970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_15
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 0
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba01925b8985da320800000000000000
+      internalID: 2570808375196061867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_16
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3470132d33e8ac50800000000000000
+      internalID: 6676836299297551422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_17
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0b2d629050392e0800000000000000
+      internalID: -2120345462697185090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_18
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 0
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a34a64c32b524e0800000000000000
+      internalID: -2007002086970738131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_AlmostDead_19
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 0
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e702200d9391f90800000000000000
+      internalID: -6982486181709578600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

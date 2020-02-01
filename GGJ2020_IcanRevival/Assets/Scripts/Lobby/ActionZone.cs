@@ -81,7 +81,7 @@ public class ActionZone : MonoBehaviour
 
     public void LaunchLevel(int arg)
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level " + arg);
         GameManager.Instance.ChangePhase(GamePhase.Game);
     }
 }

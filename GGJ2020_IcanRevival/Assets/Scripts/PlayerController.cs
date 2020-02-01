@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
     public float throwForce = 2.5f;
     public float throwTime = 0.1f;
 
+    public List<Renderer> playerRenderers = new List<Renderer>();
+
     [Header("Debug")]
     public int playerId;
     public Vector2 movingDirection = Vector2.zero;
@@ -236,6 +238,20 @@ public class PlayerController : MonoBehaviour
         playerId = id;
         name = n;
         playerName.text = n;
+        
+        foreach (var renderer in playerRenderers)
+        {
+            renderer.material.color = GameManager.Instance.PlayerColors[id];
+        }
+        playerName.color = GameManager.Instance.PlayerColors[id];
+    }
+
+    public void SetColor(Material material, Color color)
+    {
+        foreach (var renderer in playerRenderers)
+        {
+            renderer.material.color = Color.green;
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

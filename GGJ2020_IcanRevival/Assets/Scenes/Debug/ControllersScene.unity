@@ -779,8 +779,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c2ac992bd3633945bcae53e0978ddab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayRangeBetweenSpawn: {x: 1, y: 2}
-  MaxPatientSpawn: 20
+  DelayRangeBetweenSpawn: {x: 5, y: 10}
+  MaxPatientSpawn: 5
   TargetFinder: {fileID: 508007300}
   Container: {fileID: 1621129225}
   PatientPrefab: {fileID: 7088212774045425017, guid: 365eaccf03d40744fa7b94686e719f83,

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using InControl;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private float interactionRange;
     private Collider2D interactionCollider;
-    private Text playerName;
+    private TextMeshProUGUI playerName;
 
     public InputDevice device;
     public string deviceMeta;
@@ -61,7 +62,7 @@ public class PlayerController : MonoBehaviour
         interactionCollider = transform.Find(INTERACTION_COLLIDER).GetComponent<Collider2D>();
         interactionRange = interactionCollider.transform.localPosition.magnitude;
 
-        playerName = transform.Find("Canvas").GetComponentInChildren<Text>();
+        playerName = transform.Find("Canvas").GetComponentInChildren<TextMeshProUGUI>();
     }
 
     private void Update()

@@ -1,0 +1,643 @@
+fileFormatVersion: 2
+guid: 2331295ce32bf09449ce07deb44ceffe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8265274508258158732
+    second: TestChara3_Sick_0
+  - first:
+      213: 8083179873783364534
+    second: TestChara3_Sick_1
+  - first:
+      213: -2191041710660100804
+    second: TestChara3_Sick_2
+  - first:
+      213: -7896501547733502176
+    second: TestChara3_Sick_3
+  - first:
+      213: -3471844070845089815
+    second: TestChara3_Sick_4
+  - first:
+      213: 2515215181647233946
+    second: TestChara3_Sick_5
+  - first:
+      213: 3930438511457700302
+    second: TestChara3_Sick_6
+  - first:
+      213: -2778895943975365017
+    second: TestChara3_Sick_7
+  - first:
+      213: 9100416250264373111
+    second: TestChara3_Sick_8
+  - first:
+      213: -3539028945063222414
+    second: TestChara3_Sick_9
+  - first:
+      213: 7353531867864071758
+    second: TestChara3_Sick_10
+  - first:
+      213: 9191417333038973835
+    second: TestChara3_Sick_11
+  - first:
+      213: -9153077728347634632
+    second: TestChara3_Sick_12
+  - first:
+      213: -3585945213470003375
+    second: TestChara3_Sick_13
+  - first:
+      213: -2367642908760554269
+    second: TestChara3_Sick_14
+  - first:
+      213: -6794936452466056448
+    second: TestChara3_Sick_15
+  - first:
+      213: -1938297824070208631
+    second: TestChara3_Sick_16
+  - first:
+      213: 8003487595792477744
+    second: TestChara3_Sick_17
+  - first:
+      213: -8374982462819129046
+    second: TestChara3_Sick_18
+  - first:
+      213: -2012190542281605840
+    second: TestChara3_Sick_19
+  - first:
+      213: -2732303547232894263
+    second: TestChara3_Sick_0
+  - first:
+      213: 4745799508304456328
+    second: TestChara3_Sick_1
+  - first:
+      213: -4003300389811735837
+    second: TestChara3_Sick_2
+  - first:
+      213: -384797845264452713
+    second: TestChara3_Sick_3
+  - first:
+      213: -5552356136376853374
+    second: TestChara3_Sick_4
+  - first:
+      213: 8752282750040995835
+    second: TestChara3_Sick_5
+  - first:
+      213: 4653110807685669138
+    second: TestChara3_Sick_6
+  - first:
+      213: -476611371248371385
+    second: TestChara3_Sick_7
+  - first:
+      213: -1158630555673014564
+    second: TestChara3_Sick_8
+  - first:
+      213: -4735427328442336273
+    second: TestChara3_Sick_9
+  - first:
+      213: 324362976610823571
+    second: TestChara3_Sick_10
+  - first:
+      213: 8941807828258824887
+    second: TestChara3_Sick_11
+  - first:
+      213: -3189482272057595637
+    second: TestChara3_Sick_12
+  - first:
+      213: 1456727999557703325
+    second: TestChara3_Sick_13
+  - first:
+      213: -5322253233061780308
+    second: TestChara3_Sick_14
+  - first:
+      213: -2435374015388329817
+    second: TestChara3_Sick_15
+  - first:
+      213: -1129907670757907271
+    second: TestChara3_Sick_16
+  - first:
+      213: 95011230293132229
+    second: TestChara3_Sick_17
+  - first:
+      213: -7160563723884956896
+    second: TestChara3_Sick_18
+  - first:
+      213: 8787453808629457220
+    second: TestChara3_Sick_19
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TestChara3_Sick_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c2c4a07668e41ad0800000000000000
+      internalID: -2732303547232894263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ae5bb22877cd140800000000000000
+      internalID: 4745799508304456328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 24
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2b610818b6178c0800000000000000
+      internalID: -4003300389811735837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_3
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 24
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7933da2066ce8aaf0800000000000000
+      internalID: -384797845264452713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_4
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 24
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28c1cc8f28112f2b0800000000000000
+      internalID: -5552356136376853374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_5
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 24
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf7f8f12aca567970800000000000000
+      internalID: 8752282750040995835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 24
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211a2a850ab239040800000000000000
+      internalID: 4653110807685669138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 24
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74934d8ab7cb269f0800000000000000
+      internalID: -476611371248371385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_8
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 24
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde4237f5a7bbefe0800000000000000
+      internalID: -1158630555673014564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_9
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 24
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb74842fe1684eb0800000000000000
+      internalID: -4735427328442336273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d2d2f986e508400800000000000000
+      internalID: 324362976610823571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_11
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2ac2518dea71c70800000000000000
+      internalID: 8941807828258824887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_12
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09e99ca5ceacb3d0800000000000000
+      internalID: -3189482272057595637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_13
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 0
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d969004c566573410800000000000000
+      internalID: 1456727999557703325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_14
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 0
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4adae02ee8326b0800000000000000
+      internalID: -5322253233061780308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_15
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 0
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8df857c30d33ed0800000000000000
+      internalID: -2435374015388329817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_16
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b46c7fb5f2c150f0800000000000000
+      internalID: -1129907670757907271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_17
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 14
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c38b47e53c815100800000000000000
+      internalID: 95011230293132229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_18
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 0
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023f94e3b3190ac90800000000000000
+      internalID: -7160563723884956896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TestChara3_Sick_19
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 0
+        width: 12
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44123875eae43f970800000000000000
+      internalID: 8787453808629457220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

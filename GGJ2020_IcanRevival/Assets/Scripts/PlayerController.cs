@@ -202,9 +202,8 @@ public class PlayerController : MonoBehaviour
     {
         if (holded != null)
         {
-            holded.Drop();
-
             StartCoroutine(holded.ThrowCoroutine(this));
+            holded.Drop();
         }
     }
 

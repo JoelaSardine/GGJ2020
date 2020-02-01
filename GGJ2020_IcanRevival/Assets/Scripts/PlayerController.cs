@@ -149,6 +149,8 @@ public class PlayerController : MonoBehaviour
             holded.Drop(this);
 
             holded.transform.parent = null;
+
+            holded = null;
         }
 
         if (hovered != null && hovered.isGrabbable)
@@ -182,23 +184,21 @@ public class PlayerController : MonoBehaviour
                 {
                     Debug.Log("Type equal = true");
                 }
+                else
+                {
+                    Debug.Log("Type equal = false");
+                }
             }
             else if (hoveredMachine.ItemRequired == ItemType.None)
             {
                 Debug.Log("Type equal = true");
             }
+            else
+            {
+                Debug.Log("Type equal = false");
+            }
         }
 
-        /*if (hovered != null && hovered.isGrabbable)
-        {
-            hovered.Hover(false);
-            hovered.Grab(this);
-            holded = hovered;
-            hoveredList.Remove(holded);
-
-            holded.transform.SetParent(interactionCollider.transform);
-            holded.transform.localPosition = Vector3.zero;
-        }*/
     }
 
     public void SetName(string n, int id)

@@ -48,6 +48,7 @@ public class Interactable : MonoBehaviour
 
         collider.isTrigger = true;
         rigidbody.isKinematic = true;
+        rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 
     public void Drop(PlayerController player)
@@ -57,5 +58,6 @@ public class Interactable : MonoBehaviour
 
         collider.isTrigger = false;
         rigidbody.isKinematic = false;
+        rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 }

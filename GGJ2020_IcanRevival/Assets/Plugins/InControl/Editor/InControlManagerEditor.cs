@@ -2,7 +2,8 @@
 using System.IO;
 using UnityEditor;
 using UnityEngine;
-using InControl.ReorderableList;
+using System.Collections;
+using System.Collections.Generic;
 
 
 namespace InControl
@@ -51,13 +52,40 @@ namespace InControl
 			useFixedUpdate.boolValue = EditorGUILayout.ToggleLeft( "Use Fixed Update", useFixedUpdate.boolValue );
 			dontDestroyOnLoad.boolValue = EditorGUILayout.ToggleLeft( "Don't Destroy On Load", dontDestroyOnLoad.boolValue );
 
-			ReorderableListGUI.Title( "Custom Profiles" );
-			ReorderableListGUI.ListField( customProfiles );
-
 			GUILayout.Space( 3.0f );
-			
+
+            DisplayCustomProfiles();
+
 			serializedObject.ApplyModifiedProperties();
 		}
+
+        private void DisplayCustomProfiles()
+        {
+            //ReorderableListGUI.Title("Custom Profiles");
+            //ReorderableListGUI.ListField(customProfiles);
+
+            EditorGUILayout.LabelField("Custom Profiles (" + customProfiles.arraySize + ")");
+
+            for (int i = 0; i < customProfiles.arraySize; i++)
+            {
+                EditorGUILayout.BeginHorizontal();
+                
+                if (GUILayout.Button("-", GUILayout.MaxWidth(15), GUILayout.MaxHeight(15)))
+                {
+                    customProfiles.DeleteArrayElementAtIndex(i);
+                    continue;
+                }
+                customProfiles.GetArrayElementAtIndex(i).stringValue = EditorGUILayout.TextField("", customProfiles.GetArrayElementAtIndex(i).stringValue);
+
+                EditorGUILayout.EndHorizontal();
+            }
+
+            if (GUILayout.Button("+", GUILayout.MaxWidth(15), GUILayout.MaxHeight(15)))
+            {
+                customProfiles.InsertArrayElementAtIndex(customProfiles.arraySize);
+                customProfiles.GetArrayElementAtIndex(customProfiles.arraySize - 1).stringValue = string.Empty;
+            }
+        }
 	}
 }
 #endif

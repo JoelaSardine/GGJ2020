@@ -35,7 +35,10 @@ public class Patient : Interactable
 
     public void Update()
     {
-        if(moveTarget.HasValue) MoveUpdate();
+        animator.SetInteger("Life", Health);
+
+
+        if (moveTarget.HasValue) MoveUpdate();
         else AvoidUpdate();
 
         if(!healed) HealthUpdate();

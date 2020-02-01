@@ -110,7 +110,6 @@ GameObject:
   - component: {fileID: 7088212774045424998}
   - component: {fileID: 7088212774045425016}
   - component: {fileID: 3213301169040994508}
-  - component: {fileID: 1124491736820819077}
   - component: {fileID: 7088212774045424996}
   m_Layer: 8
   m_Name: Patient
@@ -178,6 +177,11 @@ MonoBehaviour:
   sickness:
     name: 0
     cure: 0
+    gameType: 0
+    gameArgument: 0
+    OnCure:
+      m_PersistentCalls:
+        m_Calls: []
   animator: {fileID: 7658587901585777491}
   avoidMask:
     useTriggers: 0
@@ -193,25 +197,6 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
---- !u!95 &1124491736820819077
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7088212774045425017}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 36e54348618ecb3489e4a015cab8752d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &7088212774045424996
 Rigidbody2D:
   serializedVersion: 4
@@ -508,6 +493,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2850583710900810475}
     m_Modifications:
+    - target: {fileID: 271786826943699168, guid: da3af568eb978574fbc3e0e1974857a0,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 05a9610dd639c374999909d703631f8a, type: 2}
+    - target: {fileID: 2544051602727246708, guid: da3af568eb978574fbc3e0e1974857a0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 54fd8215485e9d94f8c83857be05b09f, type: 2}
     - target: {fileID: 5097828912839535913, guid: da3af568eb978574fbc3e0e1974857a0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -578,6 +573,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7554981576929504230, guid: da3af568eb978574fbc3e0e1974857a0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 16d6eb478295cb64a93f33e08084f6a1, type: 2}
     - target: {fileID: 8134760674964463418, guid: da3af568eb978574fbc3e0e1974857a0,
         type: 3}
       propertyPath: m_Name

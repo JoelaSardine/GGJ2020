@@ -240,7 +240,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff0f18f06f10ef4583bd07d3f706199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 0.3
+  hovering: 0
+  isGrabbable: 1
+  isHolded: 0
+  holder: {fileID: 0}
+  weight: 1
+  collider: {fileID: 0}
+  rigidbody: {fileID: 0}
+  MoveSpeed: 2.5
   AvoidRadius: 0.8
   Health: 3
   HealthDecreaseSpeed: 10
@@ -291,7 +298,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 10
+  m_LinearDrag: 100
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}

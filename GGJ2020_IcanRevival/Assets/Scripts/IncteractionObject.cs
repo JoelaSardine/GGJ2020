@@ -2,17 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IncteractionObject : MonoBehaviour
+public class IncteractionObject : Machine
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void InteractWithItem(Interactable itemHolded)
     {
-        
-    }
+        Item item = itemHolded as Item;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (item != null)
+        {
+            if (ItemRequired == item.type)
+            {
+                Debug.Log("Type equal = true");
+            }
+            else
+            {
+                Debug.Log("Type equal = false");
+            }
+        }
+        else if (ItemRequired == ItemType.None)
+        {
+            Debug.Log("Type equal = true");
+        }
+        else
+        {
+            Debug.Log("Type equal = false");
+        }
     }
 }

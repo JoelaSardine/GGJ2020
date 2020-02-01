@@ -8,6 +8,7 @@ public enum ItemType
     None,
     Wrench,
     Seringe,
+    Patient,
 }
 
 public class Item : Interactable

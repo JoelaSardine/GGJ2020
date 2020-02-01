@@ -6,11 +6,11 @@ public class Machine : Interactable
 {
     public ItemType ItemRequired;
 
-    public virtual void InteractWithItem(Interactable itemHolded)
+    public override void InteractWithItem(Interactable itemHolded)
     {
         Item item = itemHolded as Item;
 
-        if (itemHolded != null)
+        if (item != null)
         {
             if (ItemRequired == item.type)
             {
@@ -31,9 +31,8 @@ public class Machine : Interactable
         }
     }
 
-    public virtual void Interact(PlayerController player)
+    public override void Interact(PlayerController player)
     {
 
     }
-
 }

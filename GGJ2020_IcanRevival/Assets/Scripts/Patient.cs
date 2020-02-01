@@ -9,10 +9,11 @@ public class Patient : Interactable
     public float AvoidRadius;
     public int Health = 3;
     public float HealthDecreaseSpeed = 10;
-    public string Sickness;
+    public Sickness sickness;
 
     public Vector2? moveTarget;
 
+    private bool healed;
     private Animator animator;
     private Rigidbody2D rb;
     public ContactFilter2D avoidMask;
@@ -28,7 +29,7 @@ public class Patient : Interactable
 
         animator.SetInteger("Life", Health);
 
-        label.text = Sickness;
+        label.text = sickness.name.ToString();
     }
 
     public void Update()
@@ -36,7 +37,20 @@ public class Patient : Interactable
         if(moveTarget.HasValue) MoveUpdate();
         else AvoidUpdate();
 
-        HealthUpdate();
+        if(!healed) HealthUpdate();
+    }
+
+    public override void InteractWithItem(Interactable itemHolded)
+    {
+        Item item = itemHolded as Item;
+
+        if (itemHolded != null)
+        {
+            if (sickness.TryCure(item.type))
+            {
+                ChangeHealth(Health + 1);
+            }
+        }
     }
 
     private void AvoidUpdate()
@@ -84,6 +98,12 @@ public class Patient : Interactable
     {
         Health = newHealth;
         animator.SetInteger("Life", Health);
+
+        if(Health >= 3)
+        {
+            healed = true;
+            label.text = "Healed";
+        }
 
         if(Health == 0)
         {

@@ -90,15 +90,15 @@ public class PlayerController : MonoBehaviour
                     lookingInput = movingInput;
                 }
             }
-
-            animator.SetFloat("Horizontal", lookingInput.x);
-            animator.SetFloat("Vertical", lookingInput.y);
-
+            
             if (lookingInput.sqrMagnitude > float.Epsilon)
             {
                 lookingDirection = lookingInput.normalized;
             }
             movingDirection = movingInput;
+
+            animator.SetFloat("Horizontal", lookingDirection.x);
+            animator.SetFloat("Vertical", lookingDirection.y);
 
             Move();
         }

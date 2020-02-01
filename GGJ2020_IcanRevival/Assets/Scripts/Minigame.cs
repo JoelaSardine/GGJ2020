@@ -59,7 +59,7 @@ public class Minigame : MonoBehaviour
                 {
                     float timer = rythmTimer % nameTween.Duration(false);
 
-                    if (timer > 0.4f)
+                    if (timer > 0.3f)
                     {
                         completion += completionPerInput;
                     }
@@ -118,6 +118,11 @@ public class Minigame : MonoBehaviour
             case CureMiniGame.Mash:
                 name.text = "MASH";
                 nameTween.Append(name.transform.DOPunchScale(Vector3.one * 0.3f, 0.125f)).SetLoops(-1);
+                break;
+
+            case CureMiniGame.None:
+                sickness.OnCure.Invoke();
+                enabled = false;
                 break;
         }
 

@@ -58,8 +58,12 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        //animator = GetComponent<Animator>();
+<<<<<<< HEAD
+        animator = GetComponent<Animator>();
         miniGame = transform.Find("Canvas").GetComponentInChildren<Minigame>();
+=======
+        //animator = GetComponent<Animator>();
+>>>>>>> origin/master
 
         interactionCollider = transform.Find(INTERACTION_COLLIDER).GetComponent<Collider2D>();
         interactionRange = interactionCollider.transform.localPosition.magnitude;

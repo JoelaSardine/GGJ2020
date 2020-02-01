@@ -2325,8 +2325,18 @@ MonoBehaviour:
   sicknesses:
   - name: 1
     cure: 2
+    gameType: 2
+    gameArgument: 10
+    OnCure:
+      m_PersistentCalls:
+        m_Calls: []
   - name: 2
     cure: 1
+    gameType: 1
+    gameArgument: 5
+    OnCure:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &1696887190
 Transform:
   m_ObjectHideFlags: 0
@@ -2977,6 +2987,26 @@ PrefabInstance:
       value: 'Template
 
         Player'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6984535439348147605, guid: 212c4746110cbbf42a19d1932fce9f80,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6984535439348147605, guid: 212c4746110cbbf42a19d1932fce9f80,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6984535439348147605, guid: 212c4746110cbbf42a19d1932fce9f80,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6984535439348147605, guid: 212c4746110cbbf42a19d1932fce9f80,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7800800651625699618, guid: 212c4746110cbbf42a19d1932fce9f80,
         type: 3}

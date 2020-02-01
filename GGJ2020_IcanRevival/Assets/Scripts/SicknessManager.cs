@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Random = UnityEngine.Random;
+using UnityEngine.Events;
 
 public enum SicknessType
 {
@@ -12,23 +13,28 @@ public enum SicknessType
     FlemmingiteAigue,
 }
 
-public enum CureMiniGame
-{
-    None,
-    Rythm,
-    Mash,
-    Hold,
-}
-
 [Serializable]
 public class Sickness
 {
     public SicknessType name;
     public ItemType cure;
+    public CureMiniGame gameType;
+    public float gameArgument;
 
-    public bool TryCure(ItemType itemUsed)
+    public UnityEvent OnCure;
+
+    public Sickness (Sickness sickness)
     {
-        return cure == itemUsed;
+        this.name = sickness.name;
+        this.cure = sickness.cure;
+        this.gameType = sickness.gameType;
+        this.gameArgument = sickness.gameArgument;
+        OnCure = new UnityEvent();
+    }
+
+    public void TryCure(ItemType itemUsed, PlayerController player)
+    {
+        if(cure == itemUsed) player.miniGame.SetMiniGame(this, gameType, gameArgument);
     }
 }
 
@@ -38,6 +44,6 @@ public class SicknessManager : MonoBehaviour
 
     public Sickness GetRandomsickness()
     {
-        return sicknesses[Random.Range(0, sicknesses.Length)];
+        return new Sickness(sicknesses[Random.Range(0, sicknesses.Length)]);
     }
 }

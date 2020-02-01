@@ -1705,8 +1705,18 @@ MonoBehaviour:
   sicknesses:
   - name: 1
     cure: 2
+    gameType: 3
+    gameArgument: 5
+    OnCure:
+      m_PersistentCalls:
+        m_Calls: []
   - name: 2
     cure: 1
+    gameType: 1
+    gameArgument: 4
+    OnCure:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &1696887190
 Transform:
   m_ObjectHideFlags: 0
@@ -2234,6 +2244,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1488822117987694233, guid: 212c4746110cbbf42a19d1932fce9f80,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100394935462956515, guid: 212c4746110cbbf42a19d1932fce9f80,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100394935462956515, guid: 212c4746110cbbf42a19d1932fce9f80,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100394935462956515, guid: 212c4746110cbbf42a19d1932fce9f80,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100394935462956515, guid: 212c4746110cbbf42a19d1932fce9f80,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206239121236691914, guid: 212c4746110cbbf42a19d1932fce9f80,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135140695641474987, guid: 212c4746110cbbf42a19d1932fce9f80,
+        type: 3}
+      propertyPath: mashTweenSacle
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6099612897063797935, guid: 212c4746110cbbf42a19d1932fce9f80,
         type: 3}

@@ -73,8 +73,11 @@ MonoBehaviour:
   playerId: 0
   movingDirection: {x: 0, y: 0}
   lookingDirection: {x: 0, y: 0}
-  animator: {fileID: 9201931029504672324}
+<<<<<<< HEAD
   miniGame: {fileID: 0}
+=======
+  animator: {fileID: 9201931029504672324}
+>>>>>>> origin/master
   deviceMeta: 
   hoveredList: []
   holded: {fileID: 0}
@@ -360,7 +363,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4774956730407021584}
-  - {fileID: 4911220402810385254}
+  - {fileID: 4170402552969190160}
   m_Father: {fileID: 1436345422116101423}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -145.446, y: 0, z: 0}
@@ -441,7 +444,7 @@ GameObject:
   - component: {fileID: 8368497213830389865}
   - component: {fileID: 6087760287027905225}
   m_Layer: 10
-  m_Name: Text (TMP)
+  m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -584,7 +587,7 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1001 &5124604473465370384
+--- !u!1001 &4239672268641427302
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -696,26 +699,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2877885270697366149, guid: c7f622b1fc613024b8c98e7f080b5a8c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877885270697366149, guid: c7f622b1fc613024b8c98e7f080b5a8c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877885270697366149, guid: c7f622b1fc613024b8c98e7f080b5a8c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2877885270697366149, guid: c7f622b1fc613024b8c98e7f080b5a8c,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6119014794378581637, guid: c7f622b1fc613024b8c98e7f080b5a8c,
         type: 3}
       propertyPath: m_Name
@@ -723,12 +706,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7f622b1fc613024b8c98e7f080b5a8c, type: 3}
---- !u!224 &4911220402810385254 stripped
+--- !u!224 &4170402552969190160 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 231487267618554998, guid: c7f622b1fc613024b8c98e7f080b5a8c,
     type: 3}
-  m_PrefabInstance: {fileID: 5124604473465370384}
+  m_PrefabInstance: {fileID: 4239672268641427302}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
+  m_GameObject: {fileID: 9035364336895589476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 3
+    m_FontStyle: 1
+    m_BestFit: 1
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Player
 --- !u!1001 &8968433952324410020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -825,3 +836,4 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 8968433952324410020}
   m_PrefabAsset: {fileID: 0}
+>>>>>>> origin/master

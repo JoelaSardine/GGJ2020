@@ -163,7 +163,43 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnUseButton(bool isDown) { }
+    private void OnUseButton(bool isDown)
+    {
+        if (!isDown)
+        {
+            return;
+        }
+
+        // Grab / Drop
+
+        Machine hoveredMachine = hovered as Machine;
+        Item itemHolded = holded as Item;
+        if(hoveredMachine != null)
+        {
+            if (itemHolded != null)
+            {
+                if (hoveredMachine.ItemRequired == itemHolded.type)
+                {
+                    Debug.Log("Type equal = true");
+                }
+            }
+            else if (hoveredMachine.ItemRequired == ItemType.None)
+            {
+                Debug.Log("Type equal = true");
+            }
+        }
+
+        /*if (hovered != null && hovered.isGrabbable)
+        {
+            hovered.Hover(false);
+            hovered.Grab(this);
+            holded = hovered;
+            hoveredList.Remove(holded);
+
+            holded.transform.SetParent(interactionCollider.transform);
+            holded.transform.localPosition = Vector3.zero;
+        }*/
+    }
 
     public void SetName(string n, int id)
     {

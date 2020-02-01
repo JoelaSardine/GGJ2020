@@ -175,10 +175,9 @@ public class PlayerController : MonoBehaviour
         // Grab / Drop
 
         Machine hoveredMachine = hovered as Machine;
-        Item itemHolded = holded as Item;
         if(hoveredMachine != null)
         {
-            hoveredMachine.InteractWithItem(itemHolded);
+            hoveredMachine.InteractWithItem(holded);
         }
     }
 

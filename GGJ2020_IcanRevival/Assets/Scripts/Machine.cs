@@ -6,11 +6,13 @@ public class Machine : Interactable
 {
     public ItemType ItemRequired;
 
-    public virtual void InteractWithItem(Item itemHolded)
+    public virtual void InteractWithItem(Interactable itemHolded)
     {
+        Item item = itemHolded as Item;
+
         if (itemHolded != null)
         {
-            if (ItemRequired == itemHolded.type)
+            if (ItemRequired == item.type)
             {
                 Debug.Log("Type equal = true");
             }

@@ -39,6 +39,11 @@ public class PlayerController : MonoBehaviour
     public InputDevice device;
     public string deviceMeta;
 
+    public List<Interactable> hoveredList = new List<Interactable>();
+    public Interactable hovered 
+        { get { return hoveredList.Count > 0 ? hoveredList[0] : null; } }
+    public Interactable holded;
+
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -66,6 +71,11 @@ public class PlayerController : MonoBehaviour
 
     private void ManageInput()
     {
+        if (device.Action1)
+        {
+
+        }
+
         if (movementEnabled)
         {
             Vector2 movingInput = device.LeftStick;
@@ -115,5 +125,34 @@ public class PlayerController : MonoBehaviour
         playerId = id;
         name = n;
         playerName.text = n;
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        Interactable interactable = collision.GetComponent<Interactable>();
+        if (interactable != null)
+        {
+            hoveredList.Add(interactable);
+
+            if (hoveredList.Count == 1)
+            {
+                hovered.Hover(true);
+            }
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        Interactable interactable = collision.GetComponent<Interactable>();
+        if (interactable != null)
+        {
+            if (interactable == hovered)
+            {
+                interactable.Hover(false);
+            }
+            hoveredList.Remove(interactable);
+
+            hovered?.Hover(true);
+        }
     }
 }

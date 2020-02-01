@@ -491,6 +491,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1447687646}
     m_Modifications:
+    - target: {fileID: 1188818655347892599, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
+        type: 3}
+      propertyPath: m_Text
+      value: Green popo
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284572434838058434, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2891253894422444534, guid: f4be18d36cc66b34e8192ac5e7f5115d,
+        type: 3}
     - target: {fileID: 6284572435668957416, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
       propertyPath: m_Name
@@ -1173,6 +1184,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1447687646}
     m_Modifications:
+    - target: {fileID: 1188818655347892599, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188818655347892599, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
+        type: 3}
+      propertyPath: m_Text
+      value: Red popo
+      objectReference: {fileID: 0}
     - target: {fileID: 6284572435668957416, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
       propertyPath: m_Name

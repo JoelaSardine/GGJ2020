@@ -16,8 +16,19 @@ public class PlayersManager : MonoBehaviour
 
     private List<PlayerController> playersToRemove = new List<PlayerController>();
 
-    private void Awake()
+    public void Init()
     {
+        switch (GameManager.Instance.gamePhase)
+        {
+            case GamePhase.Lobby:
+                // Everything is fine
+                break;
+            case GamePhase.Game:
+
+                break;
+            default:
+                break;
+        }
     }
 
     private void Update()

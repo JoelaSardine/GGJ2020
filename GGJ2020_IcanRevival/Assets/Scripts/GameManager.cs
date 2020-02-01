@@ -45,6 +45,13 @@ public class GameManager : MonoBehaviour
         switch (newPhase)
         {
             case GamePhase.Game:
+                if (levelManager == null || playersManager == null)
+                {
+                    Debug.LogError("Please link LevelManager and PlayersManager !");
+                    return;
+                }
+                levelManager.Init();
+                playersManager.Init();
                 break;
 
             case GamePhase.Lobby:
@@ -54,6 +61,7 @@ public class GameManager : MonoBehaviour
                     return;
                 }
                 lobbyManager.Init();
+                playersManager.Init();
                 break;
 
             default:

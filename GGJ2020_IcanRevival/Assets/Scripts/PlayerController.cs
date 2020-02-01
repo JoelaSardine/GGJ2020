@@ -146,19 +146,24 @@ public class PlayerController : MonoBehaviour
 
         if (holded != null)
         {
-            holded.Drop(this);
-
-            holded.transform.parent = null;
-
-            holded = null;
+            holded.Drop();
         }
 
         if (hovered != null && hovered.isGrabbable)
         {
             hovered.Hover(false);
-            hovered.Grab(this);
-            holded = hovered;
+            Grab(hovered);
             hoveredList.Remove(holded);
+
+        }
+    }
+
+    public void Grab(Interactable item)
+    {
+        if (item != null && item.isGrabbable)
+        {
+            item.Grab(this);
+            holded = item;
 
             holded.transform.SetParent(interactionCollider.transform);
             holded.transform.localPosition = Vector3.zero;
@@ -175,31 +180,13 @@ public class PlayerController : MonoBehaviour
         // Grab / Drop
 
         Machine hoveredMachine = hovered as Machine;
-        //Item itemHolded = holded as Item;
         if(hoveredMachine != null)
         {
             if (holded != null)
-            {
                 hoveredMachine.InteractWithItem(holded);
-                /*if (hoveredMachine.ItemRequired == itemHolded.type)
-                {
-                    Debug.Log("Type equal = true");
-                }
-                else
-                {
-                    Debug.Log("Type equal = false");
-                }*/
-            }
-            else if (hoveredMachine.ItemRequired == ItemType.None)
-            {
-                Debug.Log("Type equal = true");
-            }
             else
-            {
-                Debug.Log("Type equal = false");
-            }
+                hoveredMachine.Interact(this);
         }
-
     }
 
     public void SetName(string n, int id)

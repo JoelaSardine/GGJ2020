@@ -77,12 +77,12 @@ public class Patient : MonoBehaviour
 
         if(timer >= HealthDecreaseSpeed)
         {
-            ChangeHeatlth(Health - 1);
+            ChangeHealth(Health - 1);
             timer = 0;
         }
     }
 
-    public void ChangeHeatlth(int newHealth)
+    public void ChangeHealth(int newHealth)
     {
         Health = newHealth;
         animator.SetInteger("Life", Health);

@@ -51,8 +51,10 @@ public class Interactable : MonoBehaviour
         rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 
-    public void Drop(PlayerController player)
+    public void Drop()
     {
+        holder.holded.transform.parent = null;
+        holder.holded = null;
         holder = null;
         isHolded = false;
 

@@ -578,6 +578,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Green popo
       objectReference: {fileID: 0}
+    - target: {fileID: 1692204997571025427, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
+        type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6284572434838058434, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
       propertyPath: m_Sprite
@@ -1198,10 +1203,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c2ac992bd3633945bcae53e0978ddab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayRangeBetweenSpawn: {x: 5, y: 10}
+  DelayRangeBetweenSpawn: {x: 0, y: 2}
   MaxPatientSpawn: 5
   TargetFinder: {fileID: 508007300}
   Container: {fileID: 1621129225}
+  sicknessManager: {fileID: 0}
   PatientPrefab: {fileID: 7088212774045425017, guid: 365eaccf03d40744fa7b94686e719f83,
     type: 3}
 --- !u!4 &1531226990
@@ -1415,6 +1421,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1696887188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1696887190}
+  - component: {fileID: 1696887189}
+  m_Layer: 0
+  m_Name: Sickness
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1696887189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696887188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810928e960d9f3c4aa9a67074df564fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sicknesses:
+  - name: 1
+    cure: 2
+  - name: 2
+    cure: 1
+--- !u!4 &1696887190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696887188}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.57766634, y: 0.77017087, z: -18.613281}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1762951140
 GameObject:
@@ -1685,12 +1739,12 @@ PrefabInstance:
     - target: {fileID: 6284572435668957431, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.93
+      value: -15.38
       objectReference: {fileID: 0}
     - target: {fileID: 6284572435668957431, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.78
+      value: -6.18
       objectReference: {fileID: 0}
     - target: {fileID: 6284572435668957431, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
@@ -1768,7 +1822,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2076626933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50263ec885147e7498acd1e88b2338fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 4066dee9f0f38994cbf549b400b7c46c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hovering: 0
@@ -1776,9 +1830,10 @@ MonoBehaviour:
   isHolded: 0
   holder: {fileID: 0}
   weight: 1
-  collider: {fileID: 0}
+  collider: {fileID: 2076626936}
   rigidbody: {fileID: 2076626934}
   ItemRequired: 0
+  currentPatient: {fileID: 0}
 --- !u!61 &2076626936
 BoxCollider2D:
   m_ObjectHideFlags: 0

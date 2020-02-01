@@ -146,19 +146,24 @@ public class PlayerController : MonoBehaviour
 
         if (holded != null)
         {
-            holded.Drop(this);
-
-            holded.transform.parent = null;
-
-            holded = null;
+            holded.Drop();
         }
 
         if (hovered != null && hovered.isGrabbable)
         {
             hovered.Hover(false);
-            hovered.Grab(this);
-            holded = hovered;
+            Grab(hovered);
             hoveredList.Remove(holded);
+
+        }
+    }
+
+    public void Grab(Interactable item)
+    {
+        if (item != null && item.isGrabbable)
+        {
+            item.Grab(this);
+            holded = item;
 
             holded.transform.SetParent(interactionCollider.transform);
             holded.transform.localPosition = Vector3.zero;
@@ -177,7 +182,10 @@ public class PlayerController : MonoBehaviour
         Machine hoveredMachine = hovered as Machine;
         if(hoveredMachine != null)
         {
-            hoveredMachine.InteractWithItem(holded);
+            if (holded != null)
+                hoveredMachine.InteractWithItem(holded);
+            else
+                hoveredMachine.Interact(this);
         }
     }
 

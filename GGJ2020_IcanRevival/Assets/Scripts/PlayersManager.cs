@@ -12,19 +12,35 @@ public class PlayersManager : MonoBehaviour
     private List<bool> takenPlayerIds = new List<bool>();
 
     public int deviceCount = 1;
-    public bool isBindingInputs = false;
+    public bool isInitialized = false;
 
     private List<PlayerController> playersToRemove = new List<PlayerController>();
 
     public void Init()
     {
+        isInitialized = true;
+
         switch (GameManager.Instance.gamePhase)
         {
             case GamePhase.Lobby:
-                // Everything is fine
                 break;
             case GamePhase.Game:
+                LevelManager levelManager = GameManager.Instance.levelManager;
+                int maxPlayers = GameManager.Instance.PlayerColors.Length;
 
+                deviceCount = InputManager.Devices.Count;
+                for (int i = 0; i < deviceCount && i < maxPlayers;  ++i)
+                {
+                    int id = i;
+                    Vector3 spawn = levelManager.spawns[id].position;
+                    GameObject go = Instantiate(playerPrefab, spawn, Quaternion.identity, transform);
+                    PlayerController pc = go.GetComponent<PlayerController>();
+                    pc.device = InputManager.Devices[id];
+                    pc.deviceMeta = pc.device.Meta;
+                    pc.SetName("player" + id, id);
+                    
+                    players.Add(pc);
+                }
                 break;
             default:
                 break;

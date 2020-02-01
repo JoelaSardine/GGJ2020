@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
                 GameManager.Instance.lobbyManager = lobbyManager;
             if (levelManager)
                 GameManager.Instance.levelManager = levelManager;
+
+            if (playersManager)
+                Destroy(playersManager);
             
             Destroy(this);
         }
@@ -38,10 +41,16 @@ public class GameManager : MonoBehaviour
         GameManager.Instance = this;
         
         ChangePhase(gamePhase);
+
+        if (!playersManager.isInitialized)
+        {
+            playersManager.Init();
+        }
     }
 
     private void ChangePhase(GamePhase newPhase)
     {
+        gamePhase = newPhase;
         switch (newPhase)
         {
             case GamePhase.Game:
@@ -51,7 +60,6 @@ public class GameManager : MonoBehaviour
                     return;
                 }
                 levelManager.Init();
-                playersManager.Init();
                 break;
 
             case GamePhase.Lobby:
@@ -61,7 +69,6 @@ public class GameManager : MonoBehaviour
                     return;
                 }
                 lobbyManager.Init();
-                playersManager.Init();
                 break;
 
             default:

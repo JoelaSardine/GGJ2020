@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,8 +27,7 @@ public class LevelManager : MonoBehaviour
         spawns = newList;
     }
 
-    internal void Init()
+    public void Init()
     {
-        throw new NotImplementedException();
     }
 }

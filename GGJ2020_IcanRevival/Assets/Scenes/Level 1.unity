@@ -6330,14 +6330,14 @@ MonoBehaviour:
   - name: 1
     cure: 2
     gameType: 1
-    gameArgument: 0
+    gameArgument: 4
     OnCure:
       m_PersistentCalls:
         m_Calls: []
   - name: 2
     cure: 1
-    gameType: 0
-    gameArgument: 0
+    gameType: 2
+    gameArgument: 8
     OnCure:
       m_PersistentCalls:
         m_Calls: []

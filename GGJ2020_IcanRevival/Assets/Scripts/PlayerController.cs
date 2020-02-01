@@ -82,6 +82,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        Move();
+    }
+
     private void ManageInput()
     {
         if (device.Action3 && miniGame.enabled) miniGame.ReceiveInput(true);
@@ -139,8 +144,6 @@ public class PlayerController : MonoBehaviour
 
             animator.SetFloat("Horizontal", lookingDirection.x);
             animator.SetFloat("Vertical", lookingDirection.y);
-
-            Move();
         }
     }
 

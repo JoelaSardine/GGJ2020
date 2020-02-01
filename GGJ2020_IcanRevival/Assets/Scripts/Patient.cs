@@ -18,6 +18,7 @@ public class Patient : Interactable
     private Rigidbody2D rb;
     public ContactFilter2D avoidMask;
     private float timer = 0;
+    private Vector2 direction;
 
 
     private void Start()
@@ -37,11 +38,15 @@ public class Patient : Interactable
     {
         animator.SetInteger("Life", Health);
 
-
         if (moveTarget.HasValue) MoveUpdate();
         else AvoidUpdate();
 
         if(!healed) HealthUpdate();
+    }
+
+    private void FixedUpdate()
+    {
+        rb.AddForce(direction.normalized * MoveSpeed, ForceMode2D.Impulse);
     }
 
     public override void InteractWithItem(Interactable itemHolded)
@@ -60,21 +65,19 @@ public class Patient : Interactable
         
         if (Physics2D.OverlapCircle(rb.position, AvoidRadius, avoidMask, collidersToAvoid) > 0)
         {
-            Vector2 direction = Vector2.zero;
+            direction = Vector2.zero;
 
             for(int i = 0; i < collidersToAvoid.Count; i++)
             {
                 Vector2 colPos = collidersToAvoid[i].transform.position;
                 direction += (rb.position - colPos).normalized;
             }
-
-            rb.AddForce(direction.normalized * MoveSpeed, ForceMode2D.Impulse);
         }
     }
 
     private void MoveUpdate()
     {
-        Vector2 direction = moveTarget.Value - rb.position;
+        direction = moveTarget.Value - rb.position;
 
         rb.AddForce(direction.normalized * MoveSpeed, ForceMode2D.Impulse);
 

@@ -178,27 +178,8 @@ public class PlayerController : MonoBehaviour
         Item itemHolded = holded as Item;
         if(hoveredMachine != null)
         {
-            if (itemHolded != null)
-            {
-                if (hoveredMachine.ItemRequired == itemHolded.type)
-                {
-                    Debug.Log("Type equal = true");
-                }
-                else
-                {
-                    Debug.Log("Type equal = false");
-                }
-            }
-            else if (hoveredMachine.ItemRequired == ItemType.None)
-            {
-                Debug.Log("Type equal = true");
-            }
-            else
-            {
-                Debug.Log("Type equal = false");
-            }
+            hoveredMachine.InteractWithItem(itemHolded);
         }
-
     }
 
     public void SetName(string n, int id)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Patient : Interactable
+public class Patient : Machine
 {
     public float MoveSpeed;
     public float AvoidRadius;

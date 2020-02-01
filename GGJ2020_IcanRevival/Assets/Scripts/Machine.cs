@@ -6,15 +6,26 @@ public class Machine : Interactable
 {
     public ItemType ItemRequired;
 
-    // Start is called before the first frame update
-    void Start()
+    public virtual void InteractWithItem(Item itemHolded)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (itemHolded != null)
+        {
+            if (ItemRequired == itemHolded.type)
+            {
+                Debug.Log("Type equal = true");
+            }
+            else
+            {
+                Debug.Log("Type equal = false");
+            }
+        }
+        else if (ItemRequired == ItemType.None)
+        {
+            Debug.Log("Type equal = true");
+        }
+        else
+        {
+            Debug.Log("Type equal = false");
+        }
     }
 }

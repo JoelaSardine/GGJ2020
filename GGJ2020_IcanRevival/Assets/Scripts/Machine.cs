@@ -17,4 +17,9 @@ public class Machine : Interactable
     {
         
     }
+
+    public virtual void InteractWithItem(Interactable item)
+    {
+
+    }
 }

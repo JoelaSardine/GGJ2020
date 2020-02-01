@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DelayRangeBetweenSpawn: {x: 5, y: 10}
-  MaxPatientSpawn: 10
+  MaxPatientSpawn: 5
   TargetFinder: {fileID: 508007300}
   PatientPrefab: {fileID: 7088212774045425017, guid: 365eaccf03d40744fa7b94686e719f83,
     type: 3}

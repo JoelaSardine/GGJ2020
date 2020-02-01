@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Patient : MonoBehaviour
+public class Patient : Interactable
 {
     public float MoveSpeed;
     public float AvoidRadius;
@@ -14,7 +14,6 @@ public class Patient : MonoBehaviour
     public Vector2? moveTarget;
 
     private Animator animator;
-    private Text SicknessText;
     private Rigidbody2D rb;
     public ContactFilter2D avoidMask;
     private float timer = 0;
@@ -22,15 +21,14 @@ public class Patient : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        SicknessText = GetComponentInChildren<Text>();
         rb = GetComponent<Rigidbody2D>();
         avoidMask = new ContactFilter2D();
         avoidMask.useLayerMask = true;
         avoidMask.layerMask = LayerMask.GetMask("Patient");
 
         animator.SetInteger("Life", Health);
-        SicknessText.text = Sickness;
-        SicknessText.enabled = false;
+
+        label.text = Sickness;
     }
 
     public void Update()
@@ -90,18 +88,8 @@ public class Patient : MonoBehaviour
         if(Health == 0)
         {
             enabled = false;
-            SicknessText.text = "Dead";
+            label.text = "Dead";
         }
 
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        SicknessText.enabled = true;
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-         SicknessText.enabled = false;
     }
 }

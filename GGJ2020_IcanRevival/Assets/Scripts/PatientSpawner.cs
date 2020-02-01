@@ -8,6 +8,7 @@ public class PatientSpawner : MonoBehaviour
     public int MaxPatientSpawn;
     public MoveTargetFinder TargetFinder;
     public Transform Container;
+    public SicknessManager sicknessManager;
 
     [Space]
 
@@ -20,6 +21,7 @@ public class PatientSpawner : MonoBehaviour
     private void Start()
     {
         nextSpawn = Random.Range(DelayRangeBetweenSpawn.x, DelayRangeBetweenSpawn.y);
+        sicknessManager = sicknessManager ?? FindObjectOfType<SicknessManager>();
     }
 
     private void Update()
@@ -29,6 +31,7 @@ public class PatientSpawner : MonoBehaviour
         if(timer >= nextSpawn)
         {
             Patient patient = Instantiate(PatientPrefab, transform.position, Quaternion.identity, Container).GetComponent<Patient>();
+            patient.sickness = sicknessManager.GetRandomsickness();
             patient.moveTarget = TargetFinder?.GetTarget();
             spawnCount++;
 

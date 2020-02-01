@@ -247,6 +247,7 @@ MonoBehaviour:
   weight: 1
   collider: {fileID: 0}
   rigidbody: {fileID: 0}
+  ItemRequired: 2
   MoveSpeed: 2.5
   AvoidRadius: 0.8
   Health: 3

@@ -14,11 +14,17 @@ public class GameManager : MonoBehaviour
     public GamePhase gamePhase = GamePhase.None;
     public PlayersManager playersManager;
     public LobbyManager lobbyManager;
+    public LevelManager levelManager;
 
     private void Awake()
     {
         if (GameManager.Instance != null)
         {
+            if (lobbyManager)
+                GameManager.Instance.lobbyManager = lobbyManager;
+            if (levelManager)
+                GameManager.Instance.levelManager = levelManager;
+            
             Destroy(this);
         }
         else

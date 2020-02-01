@@ -6,32 +6,37 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public enum inputName {
-        Grab,
-        Use
-    };
-
-    private const string INPUT_AXIS_HORIZONTAL = "Horizontal";
-    private const string INPUT_AXIS_VERTICAL = "Vertical";
     private const string INTERACTION_COLLIDER = "InteractionCollider";
 
+    public enum inputName {
+        Grab,
+        Use,
+        Throw
+    };
 
-    public int playerId;
-
-
+    public Dictionary<inputName, bool> inputStatus = new Dictionary<inputName, bool> {
+        { inputName.Grab, false },
+        { inputName.Use, false },
+        { inputName.Throw, false }
+    };
+    
     private bool _movementEnabled = true;
     public bool movementEnabled {
         get { return _movementEnabled; }
         set {
-            velocity = Vector2.zero;
+            rigidbody.velocity = Vector2.zero;
             animator.SetBool("Moving", false);
             _movementEnabled = value;
         }
     }
 
-    public float speed = 5.0f;
-    public Vector2 velocity = Vector2.zero;
+    public float deadZoneSquared = 0.1f;
+    public float movementForce = 2.5f;
+    public float throwForce = 2.5f;
+    public float throwTime = 0.1f;
 
+    [Header("Debug")]
+    public int playerId;
     public Vector2 movingDirection = Vector2.zero;
     public Vector2 lookingDirection = Vector2.zero;
 
@@ -47,11 +52,6 @@ public class PlayerController : MonoBehaviour
     public List<Interactable> hoveredList = new List<Interactable>();
     public Interactable hovered { get { return hoveredList.Count > 0 ? hoveredList[0] : null; } }
     public Interactable holded;
-
-    public Dictionary<inputName, bool> inputStatus = new Dictionary<inputName, bool> {
-        { inputName.Grab, false },
-        { inputName.Use, false }
-    };
 
     private void Awake()
     {
@@ -90,6 +90,11 @@ public class PlayerController : MonoBehaviour
             inputStatus[inputName.Use] = device.Action3;
             OnUseButton(inputStatus[inputName.Use]);
         }
+        if (device.RightBumper != inputStatus[inputName.Throw])
+        {
+            inputStatus[inputName.Throw] = device.RightBumper;
+            OnThrowButton(inputStatus[inputName.Throw]);
+        }
 
         if (movementEnabled)
         {
@@ -99,10 +104,14 @@ public class PlayerController : MonoBehaviour
             {
                 movingInput.Normalize();
             }
+            else if (len < deadZoneSquared)
+            {
+                movingInput = Vector2.zero;
+            }
 
             Vector2 lookingInput = device.RightStick;
 
-            if (len < float.Epsilon)
+            if (len < deadZoneSquared)
             {
                 animator.SetBool("Moving", false);
             }
@@ -110,13 +119,13 @@ public class PlayerController : MonoBehaviour
             {
                 animator.SetBool("Moving", true);
 
-                if (lookingInput.sqrMagnitude < float.Epsilon)
+                if (lookingInput.sqrMagnitude < deadZoneSquared)
                 {
                     lookingInput = movingInput;
                 }
             }
             
-            if (lookingInput.sqrMagnitude > float.Epsilon)
+            if (lookingInput.sqrMagnitude > deadZoneSquared)
             {
                 lookingDirection = lookingInput.normalized;
             }
@@ -131,7 +140,7 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        rigidbody.velocity = movingDirection * speed;
+        rigidbody.AddForce(movingDirection * movementForce * 100);
         interactionCollider.transform.localPosition = lookingDirection * interactionRange;
     }
 
@@ -186,6 +195,15 @@ public class PlayerController : MonoBehaviour
                 hoveredInteractable.InteractWithItem(holded);
             else
                 hoveredInteractable.Interact(this);
+        }
+    }
+
+    private void OnThrowButton(bool isDown)
+    {
+        if (holded != null)
+        {
+            StartCoroutine(holded.ThrowCoroutine(this));
+            holded.Drop();
         }
     }
 

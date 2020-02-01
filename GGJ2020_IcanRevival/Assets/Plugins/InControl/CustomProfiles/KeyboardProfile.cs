@@ -70,6 +70,12 @@ namespace Profiles
 					// KeyCodeComboButton requires that all KeyCode params are down simultaneously.
 					Source = KeyCodeComboButton( KeyCode.LeftAlt, KeyCode.Alpha1 )
                 },
+                new InputControlMapping
+                {
+                    Handle = "RightBumper",
+                    Target = InputControlType.RightBumper,
+                    Source = KeyCodeButton( KeyCode.A )
+                },
             };
 
             AnalogMappings = new[]

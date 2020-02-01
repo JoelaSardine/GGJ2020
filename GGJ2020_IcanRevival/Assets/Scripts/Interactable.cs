@@ -63,7 +63,7 @@ public class Interactable : MonoBehaviour
 
     public void Drop()
     {
-        holder.holded.transform.parent = null;
+        Batman(holder.holded.transform);
         holder.holded = null;
         holder = null;
         isHolded = false;
@@ -71,5 +71,24 @@ public class Interactable : MonoBehaviour
         collider.isTrigger = false;
         rigidbody.isKinematic = false;
         rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+    }
+
+    /// <summary>Helper function that kill all parents of the target</summary>
+    private void Batman(Transform target)
+    {
+        target.parent = null;
+    }
+
+    public IEnumerator ThrowCoroutine(PlayerController player)
+    {
+        Vector2 dir = player.lookingDirection * player.throwForce * 100;
+        float t = player.throwTime;
+        while (t > 0)
+        {
+            t -= Time.deltaTime;
+            rigidbody.AddForce(dir);
+            yield return new WaitForFixedUpdate();
+        }
+
     }
 }

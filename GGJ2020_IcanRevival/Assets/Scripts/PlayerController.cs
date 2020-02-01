@@ -174,30 +174,33 @@ public class PlayerController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Interactable interactable = collision.GetComponent<Interactable>();
-        if (interactable != null && interactable.holder != this)
+        Interactable target = collision.GetComponent<Interactable>();
+        if (target != null && target.holder != this)
         {
-            hoveredList.Add(interactable);
+            hoveredList.Add(target);
 
             if (hoveredList.Count == 1)
             {
-                hovered.Hover(true);
+                target.Hover(true);
             }
         }
     }
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        Interactable interactable = collision.GetComponent<Interactable>();
-        if (interactable != null && interactable.holder != this)
+        Interactable target = collision.GetComponent<Interactable>();
+        if (target != null && target.holder != this)
         {
-            if (interactable == hovered)
+            if (target == hovered)
             {
-                interactable.Hover(false);
+                target.Hover(false);
+                hoveredList.Remove(target);
+                hovered?.Hover(true);
             }
-            hoveredList.Remove(interactable);
-
-            hovered?.Hover(true);
+            else
+            {
+                hoveredList.Remove(target);
+            }
         }
     }
 }

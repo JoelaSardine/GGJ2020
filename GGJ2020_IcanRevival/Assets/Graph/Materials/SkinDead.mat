@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Skin02
+  m_Name: SkinDead
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 0
@@ -73,5 +73,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.4865772, g: 0.754717, b: 0.44499823, a: 1}
-    - _EmissionColor: {r: 0.030778611, g: 0.080869295, b: 0.025347091, a: 1}
+    - _Color: {r: 0.23709506, g: 0.39024213, b: 0.4528302, a: 1}
+    - _EmissionColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 1}

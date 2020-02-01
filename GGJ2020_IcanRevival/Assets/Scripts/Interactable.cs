@@ -60,4 +60,17 @@ public class Interactable : MonoBehaviour
         rigidbody.isKinematic = false;
         rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
+
+    public IEnumerator ThrowCoroutine(PlayerController player)
+    {
+        Vector2 dir = player.lookingDirection * player.throwForce * 100;
+        float t = player.throwTime;
+        while (t > 0)
+        {
+            t -= Time.deltaTime;
+            rigidbody.AddForce(dir);
+            yield return new WaitForFixedUpdate();
+        }
+
+    }
 }

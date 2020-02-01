@@ -65,7 +65,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce35ac6b72b08ec4981e115810bfb17e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadZoneSquared: 0.1
   movementForce: 2.5
+  throwForce: 2
+  throwTime: 0.2
   playerId: 0
   movingDirection: {x: 0, y: 0}
   lookingDirection: {x: 0, y: 0}

@@ -29,9 +29,11 @@ public class PlayerController : MonoBehaviour
             _movementEnabled = value;
         }
     }
-    
-    public float movementForce = 2.5f;
+
     public float deadZoneSquared = 0.1f;
+    public float movementForce = 2.5f;
+    public float throwForce = 2.5f;
+    public float throwTime = 0.1f;
 
     [Header("Debug")]
     public int playerId;
@@ -193,7 +195,7 @@ public class PlayerController : MonoBehaviour
             holded.Drop(this);
             holded.transform.parent = null;
 
-            //StartCoroutine(holded.ThrowCoroutine(this));
+            StartCoroutine(holded.ThrowCoroutine(this));
 
             holded = null;
         }

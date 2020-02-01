@@ -46,8 +46,8 @@ public class Interactable : MonoBehaviour
         holder = player;
         isHolded = true;
 
-        collider.enabled = false;
-        rigidbody.simulated = false;
+        collider.isTrigger = true;
+        rigidbody.isKinematic = true;
     }
 
     public void Drop(PlayerController player)
@@ -55,7 +55,7 @@ public class Interactable : MonoBehaviour
         holder = null;
         isHolded = false;
 
-        collider.enabled = true;
-        rigidbody.simulated = true;
+        collider.isTrigger = false;
+        rigidbody.isKinematic = false;
     }
 }

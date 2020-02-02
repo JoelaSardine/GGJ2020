@@ -8,18 +8,7 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     private const string INTERACTION_COLLIDER = "InteractionCollider";
-
-    public enum inputName {
-        Grab,
-        Use,
-        Throw
-    };
-
-    public Dictionary<inputName, bool> inputStatus = new Dictionary<inputName, bool> {
-        { inputName.Grab, false },
-        { inputName.Use, false },
-        { inputName.Throw, false }
-    };
+    
     
     private bool _movementEnabled = true;
     public bool movementEnabled {
@@ -101,18 +90,27 @@ public class PlayerController : MonoBehaviour
     {
         if (device.Action3 && miniGame.enabled) miniGame.ReceiveInput(true);
 
-        if (device.Action1.HasChanged)
+        if (device.Action1.HasChanged) // A - LClick
         {
             OnGrabButton(device.Action1.WasPressed);
         }
-        if (device.Action3.HasChanged)
+        if (device.Action2.HasChanged) // B
+        {
+            OnGrabButton(device.Action2.WasPressed, true);
+        }
+        if (device.Action3.HasChanged) // X - RClick
         {
             OnUseButton(device.Action3.WasPressed);
         }
-        if (device.RightBumper.HasChanged)
+        if (device.Action4.HasChanged) // Y - MClick
+        {
+            OnThrowButton(device.Action4.WasPressed);
+        }
+        else if (device.RightBumper.HasChanged) // RB
         {
             OnThrowButton(device.RightBumper.WasPressed);
         }
+         
 
         if (movementEnabled)
         {
@@ -163,7 +161,7 @@ public class PlayerController : MonoBehaviour
         //interactionCollider.transform.localPosition = lookingDirection * interactionRange;
     }
 
-    private void OnGrabButton(bool isDown)
+    private void OnGrabButton(bool isDown, bool dropOnly = false)
     {
         if (!isDown)
         {
@@ -183,6 +181,8 @@ public class PlayerController : MonoBehaviour
             holded.Drop();
             //interactionCollider.isTrigger = true;
         }
+
+        if (dropOnly) return;
 
         if (hovered != null && hovered.isGrabbable)
         {

@@ -28,7 +28,7 @@ namespace Profiles
             {
                 new InputControlMapping
                 {
-                    Handle = "Action1 - Mouse",
+                    Handle = "Action1 - Mouse", // Grab
                     Target = InputControlType.Action1,
                     Source = MouseButton0
                 },
@@ -41,13 +41,13 @@ namespace Profiles
                 },
                 new InputControlMapping
                 {
-                    Handle = "Action2",
+                    Handle = "Action2", // Drop
                     Target = InputControlType.Action2,
-                    Source = KeyCodeButton( KeyCode.Escape, KeyCode.Backspace )
+                    Source = KeyCodeButton(KeyCode.Escape, KeyCode.Backspace, KeyCode.F)
                 },
                 new InputControlMapping
                 {
-                    Handle = "Action3 - Mouse",
+                    Handle = "Action3 - Mouse", // Use
                     Target = InputControlType.Action3,
                     Source = MouseButton1
                 },
@@ -55,27 +55,20 @@ namespace Profiles
                 {
                     Handle = "Action3 - Keyboard",
                     Target = InputControlType.Action3,
-                    Source = KeyCodeButton (KeyCode.E, KeyCode.RightShift)
+                    Source = KeyCodeButton (KeyCode.E)
                 },
                 new InputControlMapping
                 {
-                    Handle = "Action4",
+                    Handle = "Action4 - Mouse", // Throw
                     Target = InputControlType.Action4,
-                    Source = KeyCodeButton( KeyCode.R, KeyCode.LeftShift )
+                    Source = MouseButton2
                 },
                 new InputControlMapping
                 {
-                    Handle = "Combo",
-                    Target = InputControlType.LeftBumper,
-					// KeyCodeComboButton requires that all KeyCode params are down simultaneously.
-					Source = KeyCodeComboButton( KeyCode.LeftAlt, KeyCode.Alpha1 )
-                },
-                new InputControlMapping
-                {
-                    Handle = "RightBumper",
-                    Target = InputControlType.RightBumper,
-                    Source = KeyCodeButton( KeyCode.A )
-                },
+                    Handle = "Action4 - Keyboard", // Throw
+                    Target = InputControlType.Action4,
+                    Source = KeyCodeButton( KeyCode.R)
+                }
             };
 
             AnalogMappings = new[]
@@ -89,10 +82,24 @@ namespace Profiles
                 },
                 new InputControlMapping
                 {
+                    Handle = "Move X - alt",
+                    Target = InputControlType.LeftStickX,
+					// KeyCodeAxis splits the two KeyCodes over an axis. The first is negative, the second positive.
+					Source = KeyCodeAxis( KeyCode.A, KeyCode.D )
+                },
+                new InputControlMapping
+                {
                     Handle = "Move Y",
                     Target = InputControlType.LeftStickY,
 					// Notes that up is positive in Unity, therefore the order of KeyCodes is down, up.
 					Source = KeyCodeAxis( KeyCode.S, KeyCode.Z )
+                },
+                new InputControlMapping
+                {
+                    Handle = "Move Y - alt",
+                    Target = InputControlType.LeftStickY,
+					// Notes that up is positive in Unity, therefore the order of KeyCodes is down, up.
+					Source = KeyCodeAxis( KeyCode.S, KeyCode.W )
                 },
                 new InputControlMapping
                 {

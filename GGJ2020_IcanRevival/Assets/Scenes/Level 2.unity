@@ -14578,7 +14578,7 @@ PrefabInstance:
     - target: {fileID: 2028382332872601329, guid: 86f124b45133f6748b6b2319afbc4b5b,
         type: 3}
       propertyPath: sicknesses.Array.data[3].weight
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2028382332872601329, guid: 86f124b45133f6748b6b2319afbc4b5b,
         type: 3}

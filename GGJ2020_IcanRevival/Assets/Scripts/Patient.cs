@@ -142,6 +142,10 @@ public class Patient : Interactable
         {
             enabled = false;
             label.text = "Dead";
+            if (sickness.Urgente)
+            {
+                EmergencyObj.SetActive(false);
+            }
             GameManager.Instance.levelManager.KillPatient();
         }
 

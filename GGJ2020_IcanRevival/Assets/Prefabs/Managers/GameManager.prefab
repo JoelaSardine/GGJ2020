@@ -94,3 +94,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e41e97b4e376e4da383776c7e17d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxPlayerCount: 4
+  PlayerColors:
+  - {r: 0.23137257, g: 0.7137255, b: 1, a: 1}
+  - {r: 0.6117647, g: 0.121568635, b: 0, a: 1}
+  - {r: 0.37647063, g: 0.7176471, b: 0.09019608, a: 1}
+  - {r: 0.7843138, g: 0.65882355, b: 0, a: 1}
+  - {r: 0.654902, g: 0.29803923, b: 0.7843138, a: 1}
+  - {r: 0.7725491, g: 0.07058824, b: 0.5411765, a: 1}
+  - {r: 0.8862746, g: 0.26666668, b: 0, a: 1}
+  PlayerMaterials:
+  - {fileID: 2100000, guid: b55740006242fc14095ce36cf8e276c1, type: 2}
+  - {fileID: 2100000, guid: e210067f6dd810f40a78499793317c5a, type: 2}
+  - {fileID: 2100000, guid: a6813c86e8618b44dadb2211fe1a4e4a, type: 2}
+  - {fileID: 2100000, guid: bf676d5466eb3b7439aa5388d19d5639, type: 2}
+  - {fileID: 2100000, guid: 1d28663e294d127419f5ad12e5bcd72f, type: 2}
+  - {fileID: 2100000, guid: 925193b95ef117642ac91aa53f21b7b8, type: 2}
+  - {fileID: 2100000, guid: e874108c99a80294abe6ee998d7b47fd, type: 2}
+  gamePhase: 0
+  playersManager: {fileID: 0}
+  lobbyManager: {fileID: 0}
+  levelManager: {fileID: 0}

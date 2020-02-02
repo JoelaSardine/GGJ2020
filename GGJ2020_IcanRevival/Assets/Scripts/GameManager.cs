@@ -9,9 +9,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public int maxPlayerCount = 4;
     public Color[] PlayerColors = new Color[] {
         Color.blue, Color.red, Color.green, Color.yellow
     };
+    public Material[] PlayerMaterials = new Material[4] { null, null, null, null };
+
     public GamePhase gamePhase = GamePhase.None;
     public PlayersManager playersManager;
     public LobbyManager lobbyManager;

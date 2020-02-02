@@ -36,6 +36,7 @@ public class PatientSpawner : MonoBehaviour
             patient.moveTarget = TargetFinder?.GetTarget();
             
             spawnCount++;
+            GameManager.Instance.levelManager.AddSickPatient();
 
             if(spawnCount >= MaxPatientSpawn)
             {

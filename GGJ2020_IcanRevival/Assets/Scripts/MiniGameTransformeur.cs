@@ -15,25 +15,42 @@ public class MiniGameTransformeur : Machine
 
     private Item item;
 
-    private void Start()
+    public override void Start()
     {
+        base.Start();
+
         OnFinished.AddListener(TransformItem);
     }
 
     public override void InteractWithItem(Interactable itemHolded)
     {
-        item = itemHolded as Item;
-        if(item.type == ItemRequired)
+        if (broken == false)
         {
-            PlayerController player = itemHolded.holder;
-            player.miniGame.SetMiniGame(OnFinished, game, argument);
+            item = itemHolded as Item;
+            if (item.type == ItemRequired)
+            {
+                PlayerController player = itemHolded.holder;
+                player.miniGame.SetMiniGame(OnFinished, game, argument );
+            }
         }
+        else
+        {
+            item = itemHolded as Item;
+            if (item.type == ItemType.ClefAMolette)
+            {
+                PlayerController player = itemHolded.holder;
+                player.miniGame.SetMiniGame(OnRepairFinished, repairGame, repairArgument);
+            }
+        }
+        
     }
 
     private void TransformItem()
     {
+       
         item.type = newItemType;
         item.GetComponentInChildren<SpriteRenderer>().sprite = newItemSprite;
         item.ChangeName(newItemName);
+ 
     }
 }

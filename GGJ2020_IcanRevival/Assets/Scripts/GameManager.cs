@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public int maxPlayerCount = 4;
+    public int currentPlayerCount = 0;
     public Color[] PlayerColors = new Color[] {
         Color.blue, Color.red, Color.green, Color.yellow
     };
@@ -52,6 +53,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+    }
+
     private void Init()
     {
         GameManager.Instance = this;
@@ -70,6 +75,11 @@ public class GameManager : MonoBehaviour
         if (lobbyManager)
         {
             lobbyManager.Init();
+        }
+
+        if (levelManager)
+        {
+            levelManager.Init();
         }
 
         Transform soundContainer = transform.Find("Sounds");

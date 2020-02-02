@@ -33,7 +33,7 @@ public class PlayersManager : MonoBehaviour
                 for (int i = 0; i < deviceCount && i < maxPlayers;  ++i)
                 {
                     int id = i;
-                    Vector3 spawn = levelManager.spawns[id].position;
+                    Vector3 spawn = levelManager.playersSpawns[id].position;
                     GameObject go = Instantiate(playerPrefab, spawn, Quaternion.Euler(90,0,0), transform);
                     PlayerController pc = go.GetComponent<PlayerController>();
                     pc.device = InputManager.Devices[id];
@@ -42,6 +42,8 @@ public class PlayersManager : MonoBehaviour
                     
                     players.Add(pc);
                 }
+
+                GameManager.Instance.currentPlayerCount = players.Count;
                 break;
             default:
                 break;
@@ -58,7 +60,7 @@ public class PlayersManager : MonoBehaviour
     {
         for (int i = 0; i < players.Count; i++)
         {
-            players[i].transform.position = levelManager.spawns[i].position;
+            players[i].transform.position = levelManager.playersSpawns[i].position;
         }
     }
     public void OnBackToLobby(LobbyManager lobbyManager)
@@ -162,6 +164,8 @@ public class PlayersManager : MonoBehaviour
         lobbyZone.Enable(pc);
 
         players.Add(pc);
+
+        GameManager.Instance.currentPlayerCount++;
     }
 
     private void RemovePlayer(PlayerController player)
@@ -173,6 +177,8 @@ public class PlayersManager : MonoBehaviour
         takenPlayerColors[player.colorId] = false;
         Destroy(player.gameObject);
         players.Remove(player);
+
+        GameManager.Instance.currentPlayerCount--;
     }
     
     private int GetPlayerId()

@@ -10,6 +10,8 @@ public class LevelManager : MonoBehaviour
     public SicknessManager sicknessManager;
     
     public TextMeshProUGUI patientInfoField;
+    public RectTransform winUIPanel;
+    public RectTransform loseUIPanel;
 
     //public bool shuffleSpawns = false;
     public List<Transform> playersSpawns = new List<Transform>();
@@ -80,6 +82,7 @@ public class LevelManager : MonoBehaviour
         patSickCount--;
         patDeadCount++;
         UpdateUI();
+
     }
 
     public void HealPatient()
@@ -87,6 +90,7 @@ public class LevelManager : MonoBehaviour
         patSickCount--;
         patHealedCount++;
         UpdateUI();
+
     }
 
     public void UpdateUI()
@@ -94,5 +98,14 @@ public class LevelManager : MonoBehaviour
         string s = string.Format("<color=#60B717>{0} Healed</color>\n<color=#C8A800>{1} Sick</color>\n<color=#9C1F00>{2} Dead</color>",
             patHealedCount, patSickCount, patDeadCount);
         patientInfoField.text = s;
+
+        if (patDeadCount >= maxDeadPerPlayer * GameManager.Instance.currentPlayerCount)
+        {
+            loseUIPanel.gameObject.SetActive(true);
+        }
+        else if (patSickCount == 0 && patHealedCount > 0)
+        {
+            winUIPanel.gameObject.SetActive(true);
+        }
     }
 }

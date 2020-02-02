@@ -13,6 +13,7 @@ public enum SicknessType
     FlemmingiteAigue,
     CriseCardiaque,
     PriseDeSang,
+    Grippe,
 }
 
 [Serializable]

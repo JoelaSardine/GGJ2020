@@ -9,25 +9,28 @@ public class Patient : Interactable
     public float AvoidRadius;
     public int Health = 3;
     public float HealthDecreaseSpeed = 10;
-    public Sickness sickness; 
+    public Sickness sickness;
+
+    private Item item;
 
     public Vector2? moveTarget;
 
     [HideInInspector] public bool healed;
     public Animator animator;
     private Rigidbody2D rb;
-    public ContactFilter2D avoidMask;
+    private ContactFilter2D avoidMask;
+    private LayerMask LookAtMask;
     private float timer = 0;
     private Vector2 direction;
 
 
     private void Start()
     {
-        //animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         avoidMask = new ContactFilter2D();
         avoidMask.useLayerMask = true;
         avoidMask.layerMask = LayerMask.GetMask("Patient");
+        LookAtMask = LayerMask.GetMask("Player");
 
         animator.SetInteger("Life", Health);
 
@@ -36,8 +39,6 @@ public class Patient : Interactable
 
     public void Update()
     {
-        animator.SetInteger("Life", Health);
-
         if (moveTarget.HasValue) MoveUpdate();
         else AvoidUpdate();
 
@@ -46,12 +47,19 @@ public class Patient : Interactable
 
     private void FixedUpdate()
     {
+        bool moving = direction.magnitude > 0.1f;
+        if (moving)
+        {
+            animator.transform.parent.rotation = Quaternion.LookRotation(direction, animator.transform.parent.up);
+        }
+
+        animator.SetBool("Moving", moving);
         rb.AddForce(direction.normalized * MoveSpeed, ForceMode2D.Impulse);
     }
 
     public override void InteractWithItem(Interactable itemHolded)
     {
-        Item item = itemHolded as Item;
+        item = itemHolded as Item;
 
         if (itemHolded != null && enabled && !healed)
         {
@@ -109,6 +117,8 @@ public class Patient : Interactable
         {
             healed = true;
             label.text = "Healed";
+            animator.SetBool("Healed", true);
+            item.Used();
         }
 
         if(Health == 0)

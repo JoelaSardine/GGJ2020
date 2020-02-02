@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using DG.Tweening;
 using TMPro;
 
-public enum CureMiniGame
+public enum MiniGameType
 {
     None,
     Rythm,
@@ -16,10 +16,11 @@ public enum CureMiniGame
 public class Minigame : MonoBehaviour
 {
     public GameObject Jauge;
-    public Sickness sickness;
+
+    public UnityEvent OnFinished;
 
     private float completion;
-    private CureMiniGame currentMinigame;
+    private MiniGameType currentMinigame;
     private TextMeshProUGUI name;
     private Sequence nameTween;
 
@@ -43,7 +44,7 @@ public class Minigame : MonoBehaviour
     {
         switch (currentMinigame)
         {
-            case CureMiniGame.Hold:
+            case MiniGameType.Hold:
                 if (Hold)
                 {
                     completion += completionPerInput * Time.deltaTime;
@@ -54,7 +55,7 @@ public class Minigame : MonoBehaviour
                 }
                 break;
 
-            case CureMiniGame.Rythm:
+            case MiniGameType.Rythm:
                 if (!Hold)
                 {
                     float timer = rythmTimer % nameTween.Duration(false);
@@ -70,7 +71,7 @@ public class Minigame : MonoBehaviour
                 }
                 break;
 
-            case CureMiniGame.Mash:
+            case MiniGameType.Mash:
                 if (!Hold)
                 {
                     completion += completionPerInput;
@@ -82,14 +83,14 @@ public class Minigame : MonoBehaviour
 
         if (completion >= 1)
         {
-            sickness.OnCure.Invoke();
+            OnFinished.Invoke();
             enabled = false;
         }
     }
 
-    public void SetMiniGame(Sickness sickness, CureMiniGame miniGame, float value)
+    public void SetMiniGame(UnityEvent onFinished, MiniGameType miniGame, float value)
     {
-        this.sickness = sickness;
+        OnFinished = onFinished;
         nameTween.Kill();
         nameTween = DOTween.Sequence();
 
@@ -103,25 +104,25 @@ public class Minigame : MonoBehaviour
 
         switch (currentMinigame)
         {
-            case CureMiniGame.Hold:
+            case MiniGameType.Hold:
                 name.text = "HOLD";
                 nameTween.Append(name.transform.DOPunchScale(Vector3.one * 0.4f, 5f, 0, 0)).SetLoops(-1);
                 break;
 
-            case CureMiniGame.Rythm:
+            case MiniGameType.Rythm:
                 name.text = "RYTHM";
                 nameTween.Append(name.transform.DOPunchScale(Vector3.one * 0.3f, 0.2f));
                 nameTween.PrependInterval(0.4f).SetLoops(-1);
                 rythmTimer = 0;
                 break;
 
-            case CureMiniGame.Mash:
+            case MiniGameType.Mash:
                 name.text = "MASH";
                 nameTween.Append(name.transform.DOPunchScale(Vector3.one * 0.3f, 0.125f)).SetLoops(-1);
                 break;
 
-            case CureMiniGame.None:
-                sickness.OnCure.Invoke();
+            case MiniGameType.None:
+                OnFinished.Invoke();
                 enabled = false;
                 break;
         }
@@ -131,7 +132,7 @@ public class Minigame : MonoBehaviour
     
     private void OnDisable()
     {
-        currentMinigame = CureMiniGame.None;
+        currentMinigame = MiniGameType.None;
         gameObject.SetActive(false);
         nameTween.Kill();
     }

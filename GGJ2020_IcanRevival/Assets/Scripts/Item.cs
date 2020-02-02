@@ -13,6 +13,7 @@ public enum ItemType
     Sang,
     PocheVide,
     SeringeVide,
+    ClefAMolette,
 }
 
 public class Item : Interactable

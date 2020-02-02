@@ -24,7 +24,7 @@ public class PlayerZone : MonoBehaviour
     public void SetColor(int colorId)
     {
         Color c = GameManager.Instance.PlayerColors[colorId];
-        c.a = 0.2f;
+        c.a = 0.3f;
         ground.color = c;
     }
 
@@ -49,6 +49,8 @@ public class PlayerZone : MonoBehaviour
             nameField.text = player.name;
             deviceField.text = player.device.Name;
             controller = player;
+
+            UpdateColor();
         }
     }
 }

@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5935471660846113635}
   - component: {fileID: 5935471660846113636}
+  - component: {fileID: 2028382332872601329}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -77,12 +78,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fafc187b282f40c4b99f2b2cc67eb203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawns:
-  - {fileID: 5935471661979612526}
-  - {fileID: 5935471661659657871}
-  - {fileID: 5935471660180097477}
-  - {fileID: 5935471661536700066}
+  sicknessManager: {fileID: 0}
   shuffleSpawns: 0
+  playersSpawns: []
+  shuffleSpawners: 0
+  patientSpawners: []
+--- !u!114 &2028382332872601329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5935471660846113637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810928e960d9f3c4aa9a67074df564fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sicknesses:
+  - name: 1
+    cure: 3
+    gameType: 1
+    gameArgument: 4
+    OnCure:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: 2
+    cure: 2
+    gameType: 3
+    gameArgument: 8
+    OnCure:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: 3
+    cure: 1
+    gameType: 3
+    gameArgument: 4
+    OnCure:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: 4
+    cure: 4
+    gameType: 2
+    gameArgument: 10
+    OnCure:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: 5
+    cure: 5
+    gameType: 3
+    gameArgument: 4
+    OnCure:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &5935471661536700067
 GameObject:
   m_ObjectHideFlags: 0

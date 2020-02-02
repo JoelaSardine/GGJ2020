@@ -126,12 +126,14 @@ public class Patient : Interactable
             label.text = "Healed";
             animator.SetBool("Healed", true);
             item?.Used();
+            GameManager.Instance.levelManager.HealPatient();
         }
 
         if(Health == 0)
         {
             enabled = false;
             label.text = "Dead";
+            GameManager.Instance.levelManager.KillPatient();
         }
 
     }

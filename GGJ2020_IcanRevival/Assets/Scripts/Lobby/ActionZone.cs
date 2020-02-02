@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ActionZone : MonoBehaviour
 {
     public delegate void Method(int arg);
-    public enum Action { None, Quit }
+    public enum Action { None, Quit, LaunchLevel }
 
     public Dictionary<Action, Method> dico = new Dictionary<Action, Method>();
 
@@ -28,6 +28,7 @@ public class ActionZone : MonoBehaviour
 
         dico[Action.None] = Nothing;
         dico[Action.Quit] = Quit;
+        dico[Action.LaunchLevel] = LaunchLevel;
     }
 
     private void Update()
@@ -75,5 +76,10 @@ public class ActionZone : MonoBehaviour
 #else
         Application.Quit();
 #endif
+    }
+
+    public void LaunchLevel(int arg)
+    {
+        GameManager.Instance.LaunchScene("Level " + arg);
     }
 }

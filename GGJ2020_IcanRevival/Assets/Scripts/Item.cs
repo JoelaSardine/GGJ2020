@@ -14,6 +14,7 @@ public enum ItemType
     PocheVide,
     SeringeVide,
     ClefAMolette,
+    SeringeVacine,
 }
 
 public class Item : Interactable

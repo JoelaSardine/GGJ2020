@@ -20,6 +20,8 @@ public class Interactable : MonoBehaviour
 
     private int baseLayer;
 
+    private bool isDirty;
+
     private void Awake()
     {
         label = GetComponentInChildren<TextMeshProUGUI>();
@@ -30,6 +32,20 @@ public class Interactable : MonoBehaviour
         collider = GetComponent<Collider2D>();
 
         baseLayer = this.gameObject.layer;
+
+        UnityEngine.SceneManagement.SceneManager.sceneUnloaded += OnSceneUnload;
+    }
+
+    private void OnSceneUnload(UnityEngine.SceneManagement.Scene current)
+    {
+        if (isHolded)
+        {
+            Drop();
+        }
+        if (isDirty)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Update()
@@ -70,6 +86,8 @@ public class Interactable : MonoBehaviour
        
     public void Grab(PlayerController player)
     {
+        isDirty = true;
+
         GameManager.Instance.PlaySound(SoundEvent.Grab);
 
         holder = player;

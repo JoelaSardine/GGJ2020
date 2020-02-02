@@ -63,6 +63,11 @@ PrefabInstance:
       propertyPath: repairArgument
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 2993470579354520291, guid: 6164c6965edd01946bbf9c96cb2c5889,
+        type: 3}
+      propertyPath: newItemMat
+      value: 
+      objectReference: {fileID: 2100000, guid: d72e57591994cd44f86d1f3d6a4f8306, type: 2}
     - target: {fileID: 4400431037351764202, guid: 6164c6965edd01946bbf9c96cb2c5889,
         type: 3}
       propertyPath: m_textInfo.characterCount

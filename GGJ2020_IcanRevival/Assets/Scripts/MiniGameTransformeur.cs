@@ -8,7 +8,7 @@ public class MiniGameTransformeur : Machine
     public MiniGameType game;
     public float argument;
     public ItemType newItemType;
-    public Sprite newItemSprite;
+    public Material newItemMat;
     public string newItemName;
 
     public UnityEvent OnFinished;
@@ -47,10 +47,8 @@ public class MiniGameTransformeur : Machine
 
     private void TransformItem()
     {
-       
         item.type = newItemType;
-        item.GetComponentInChildren<SpriteRenderer>().sprite = newItemSprite;
+        item.GetComponentInChildren<MaterialChanger>().ChangeAsset(newItemMat);
         item.ChangeName(newItemName);
- 
     }
 }

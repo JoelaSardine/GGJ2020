@@ -18,6 +18,8 @@ public class Interactable : MonoBehaviour
     public new Collider2D collider;
     public new Rigidbody2D rigidbody;
 
+    private int baseLayer;
+
     private void Awake()
     {
         label = GetComponentInChildren<TextMeshProUGUI>();
@@ -26,6 +28,8 @@ public class Interactable : MonoBehaviour
 
         rigidbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
+
+        baseLayer = this.gameObject.layer;
     }
 
     private void Update()
@@ -71,7 +75,8 @@ public class Interactable : MonoBehaviour
         holder = player;
         isHolded = true;
 
-        collider.isTrigger = true;
+        //collider.isTrigger = true;
+        this.gameObject.layer = 13;
         rigidbody.isKinematic = true;
         rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
     }
@@ -85,7 +90,8 @@ public class Interactable : MonoBehaviour
         holder = null;
         isHolded = false;
 
-        collider.isTrigger = false;
+        //collider.isTrigger = false;
+        this.gameObject.layer = baseLayer;
         rigidbody.isKinematic = false;
         rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
     }

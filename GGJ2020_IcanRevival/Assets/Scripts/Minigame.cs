@@ -78,7 +78,7 @@ public class Minigame : MonoBehaviour
                 break;
         }
 
-        Jauge.transform.localPosition = Vector3.right * -2.0f * (1 - completion);
+        Jauge.transform.localPosition = Vector3.right * -100f * (1 - completion);
 
         if (completion >= 1)
         {

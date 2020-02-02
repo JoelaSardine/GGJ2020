@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!23 &23499971 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 1413467227869620104, guid: 212c4746110cbbf42a19d1932fce9f80,
+    type: 3}
+  m_PrefabInstance: {fileID: 1436345421768928574}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &195043994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,6 +1853,12 @@ Canvas:
   m_SortingLayerID: -1278937133
   m_SortingOrder: 10
   m_TargetDisplay: 0
+--- !u!23 &1591526107 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 9022251630305170074, guid: 212c4746110cbbf42a19d1932fce9f80,
+    type: 3}
+  m_PrefabInstance: {fileID: 1436345421768928574}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1668779224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,6 +2001,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1534600549}
     m_Modifications:
+    - target: {fileID: 1436345422116101422, guid: 212c4746110cbbf42a19d1932fce9f80,
+        type: 3}
+      propertyPath: playerRenderers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436345422116101422, guid: 212c4746110cbbf42a19d1932fce9f80,
+        type: 3}
+      propertyPath: playerRenderers.Array.data[0]
+      value: 
+      objectReference: {fileID: 23499971}
+    - target: {fileID: 1436345422116101422, guid: 212c4746110cbbf42a19d1932fce9f80,
+        type: 3}
+      propertyPath: playerRenderers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1591526107}
     - target: {fileID: 1436345422116101423, guid: 212c4746110cbbf42a19d1932fce9f80,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -37,9 +37,11 @@ public class PlayerController : MonoBehaviour
     public float throwTime = 0.1f;
 
     public List<Renderer> playerRenderers = new List<Renderer>();
+    public List<GameObject> playerHairs = new List<GameObject>();
 
     [Header("Debug")]
     public int playerId;
+    public int colorId;
     public Vector2 movingDirection = Vector2.zero;
     public Vector2 lookingDirection = Vector2.zero;
 
@@ -68,6 +70,12 @@ public class PlayerController : MonoBehaviour
         //miniGame.enabled = false;
 
         playerName = transform.Find("Canvas").GetComponentInChildren<TextMeshProUGUI>();
+
+        int rdm = Random.Range(0, playerHairs.Count);
+        for (int i = 0; i < playerHairs.Count; i++)
+        {
+            playerHairs[i].SetActive(i == rdm);
+        }
     }
 
     private void Update()
@@ -233,25 +241,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void SetName(string n, int id)
+    public void SetName(string n, int id, int colorId)
     {
         playerId = id;
         name = n;
         playerName.text = n;
-        
-        foreach (var renderer in playerRenderers)
-        {
-            renderer.material.color = GameManager.Instance.PlayerColors[id];
-        }
-        playerName.color = GameManager.Instance.PlayerColors[id];
+        this.colorId = colorId;
     }
 
-    public void SetColor(Material material, Color color)
+    public void SetColor(int id)
     {
+        colorId = id;
         foreach (var renderer in playerRenderers)
         {
-            renderer.material.color = Color.green;
+            renderer.material = GameManager.Instance.PlayerMaterials[id];
         }
+        playerName.color = GameManager.Instance.PlayerColors[id];
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,10 +12,16 @@ public class LobbyManager : MonoBehaviour
     {
         for (int i = 0; i < playersZones.Count; i++)
         {
-            Color c = GameManager.Instance.PlayerColors[i];
-            c.a = zoneOpacity;
-            playersZones[i].SetColor(c);
+            playersZones[i].SetColor(i);
             playersZones[i].Init();
+        }
+    }
+
+    public void UpdateZoneColors()
+    {
+        foreach (var zone in playersZones)
+        {
+            zone.UpdateColor();
         }
     }
 }

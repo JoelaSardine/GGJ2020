@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -20,9 +21,19 @@ public class PlayerZone : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void SetColor(Color c)
+    public void SetColor(int colorId)
     {
+        Color c = GameManager.Instance.PlayerColors[colorId];
+        c.a = 0.2f;
         ground.color = c;
+    }
+
+    public void UpdateColor()
+    {
+        if (controller)
+        {
+            SetColor(controller.colorId);
+        }
     }
 
     public void Enable(PlayerController player)

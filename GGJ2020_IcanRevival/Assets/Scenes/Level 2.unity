@@ -9011,26 +9011,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1447687646}
     m_Modifications:
-    - target: {fileID: 24721877637857064, guid: dfd234d78aa9020479e0a956991e8e72,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 24721877637857064, guid: dfd234d78aa9020479e0a956991e8e72,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 24721877637857064, guid: dfd234d78aa9020479e0a956991e8e72,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 24721877637857064, guid: dfd234d78aa9020479e0a956991e8e72,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5325298887135646345, guid: dfd234d78aa9020479e0a956991e8e72,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9090,11 +9070,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Empty blood bag
-      objectReference: {fileID: 0}
-    - target: {fileID: 5325298888376672186, guid: dfd234d78aa9020479e0a956991e8e72,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfd234d78aa9020479e0a956991e8e72, type: 3}
@@ -9986,6 +9961,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1447687646}
     m_Modifications:
+    - target: {fileID: 1291664053532572434, guid: 6af3b77d51b5c9c47b553393266280cb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1315751523463950179, guid: 6af3b77d51b5c9c47b553393266280cb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10065,6 +10045,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169498507132300226, guid: 6af3b77d51b5c9c47b553393266280cb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6af3b77d51b5c9c47b553393266280cb, type: 3}

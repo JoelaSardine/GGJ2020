@@ -104,14 +104,14 @@ public class PlayersManager : MonoBehaviour
                 {
                     alreadyBound = true;
 
-                    if (device.Action2)
+                    if (device.Action2.WasPressed)
                     {
                         playersToRemove.Add(player);
                     }
-                    else if (device.Action4)
+                    else if (device.Action4.WasPressed)
                     {
                         int oldColorId = player.colorId;
-                        player.SetColor(GetPlayerColorId());
+                        player.SetColor(GetPlayerColorId(oldColorId + 1));
                         takenPlayerColors[oldColorId] = false;
                         GameManager.Instance.lobbyManager.UpdateZoneColors();
                     }
@@ -145,17 +145,8 @@ public class PlayersManager : MonoBehaviour
     private void CreateNewPlayer(InputDevice device)
     {
         int id = GetPlayerId();
-        int colorId;
-        if (takenPlayerColors[id])
-        {
-            colorId = GetPlayerColorId();
-        }
-        else
-        {
-            colorId = id;
-            takenPlayerColors[id] = true;
-        }
-
+        int colorId = GetPlayerColorId(id);
+        
         PlayerZone lobbyZone = GameManager.Instance.lobbyManager.playersZones[id];
         GameObject go = Instantiate(playerPrefab, lobbyZone.spawnPos, Quaternion.Euler(90, 0, 0), transform);
         PlayerController pc = go.GetComponent<PlayerController>();
@@ -190,21 +181,27 @@ public class PlayersManager : MonoBehaviour
                 return i;
             }
         }
+
         takenPlayerIds.Add(true);
         return i;
     }
 
-    private int GetPlayerColorId(int startingValue)
+    private int GetPlayerColorId(int i)
     {
-        int i = 0;
-        for (; i < takenPlayerColors.Count; i++)
+        for (int c = 0; c < takenPlayerColors.Count; c++)
         {
+            while (i >= takenPlayerColors.Count)
+                i -= takenPlayerColors.Count;
+
             if (!takenPlayerColors[i])
             {
                 takenPlayerColors[i] = true;
                 return i;
             }
+
+            i++;
         }
+
         return i;
     }
 }

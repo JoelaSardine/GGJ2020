@@ -85,6 +85,13 @@ public class Patient : Interactable
 
     private void MoveUpdate()
     {
+        if (isHolded)
+        {
+            moveTarget = null;
+            direction = Vector2.zero;
+            return;
+        }
+
         direction = moveTarget.Value - rb.position;
 
         rb.AddForce(direction.normalized * MoveSpeed, ForceMode2D.Impulse);
@@ -118,7 +125,7 @@ public class Patient : Interactable
             healed = true;
             label.text = "Healed";
             animator.SetBool("Healed", true);
-            item.Used();
+            item?.Used();
         }
 
         if(Health == 0)

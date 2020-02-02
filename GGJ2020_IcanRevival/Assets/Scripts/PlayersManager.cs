@@ -94,6 +94,8 @@ public class PlayersManager : MonoBehaviour
     /// </summary>
     private void UpdateLobby()
     {
+        LobbyManager lobby = GameManager.Instance.lobbyManager;
+
         foreach (var device in InputManager.Devices)
         {
             bool alreadyBound = false;
@@ -107,13 +109,15 @@ public class PlayersManager : MonoBehaviour
                     if (device.Action2.WasPressed)
                     {
                         playersToRemove.Add(player);
+                        GameManager.Instance.PlaySound(SoundEvent.Throw);
                     }
                     else if (device.Action4.WasPressed)
                     {
                         int oldColorId = player.colorId;
                         player.SetColor(GetPlayerColorId(oldColorId + 1));
                         takenPlayerColors[oldColorId] = false;
-                        GameManager.Instance.lobbyManager.UpdateZoneColors();
+                        lobby.UpdateZoneColors();
+                        GameManager.Instance.PlaySound(SoundEvent.Mash);
                     }
                     break;
                 }
@@ -126,6 +130,7 @@ public class PlayersManager : MonoBehaviour
             if (device.Action1)
             {
                 CreateNewPlayer(device);
+                GameManager.Instance.PlaySound(SoundEvent.Grab);
             }
         }
 

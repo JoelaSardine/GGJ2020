@@ -83,6 +83,7 @@ public class Minigame : MonoBehaviour
 
         if (completion >= 1)
         {
+            GameManager.Instance.PlaySound(SoundEvent.Success);
             OnFinished.Invoke();
             enabled = false;
         }

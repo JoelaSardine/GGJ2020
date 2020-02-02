@@ -35,6 +35,7 @@ public class ActionZone : MonoBehaviour
     {
         if (FillAmount >= 1)
         {
+            GameManager.Instance.PlaySound(SoundEvent.Success);
             dico[action](arg);
             return;
         }

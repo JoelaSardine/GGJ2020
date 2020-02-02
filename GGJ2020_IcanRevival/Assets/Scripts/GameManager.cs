@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public enum GamePhase { None, Game, Lobby }
+public enum SoundEvent { Success, Grab, Mash, Throw, Drop } 
 
 public class GameManager : MonoBehaviour
 {
@@ -20,8 +21,8 @@ public class GameManager : MonoBehaviour
     public LobbyManager lobbyManager;
     public LevelManager levelManager;
 
-    private bool waitForLoad = true;
-
+    private Dictionary<SoundEvent, AudioSource> sounds = new Dictionary<SoundEvent, AudioSource>();
+    
     private void Awake()
     {
         if (GameManager.Instance != null)
@@ -70,6 +71,13 @@ public class GameManager : MonoBehaviour
         {
             lobbyManager.Init();
         }
+
+        Transform soundContainer = transform.Find("Sounds");
+        sounds[SoundEvent.Mash] = soundContainer.Find("Mash").GetComponent<AudioSource>();
+        sounds[SoundEvent.Grab] = soundContainer.Find("Grab").GetComponent<AudioSource>();
+        sounds[SoundEvent.Success] = soundContainer.Find("Success").GetComponent<AudioSource>();
+        sounds[SoundEvent.Throw] = soundContainer.Find("Throw").GetComponent<AudioSource>();
+        sounds[SoundEvent.Drop] = soundContainer.Find("Drop").GetComponent<AudioSource>();
     }
 
     public void ChangePhase(GamePhase newPhase)
@@ -104,6 +112,11 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
         GameManager.Instance.ChangePhase(GamePhase.Game);
+    }
+
+    public void PlaySound(SoundEvent sound)
+    {
+        sounds[sound].Play();
     }
 
     private void Update()

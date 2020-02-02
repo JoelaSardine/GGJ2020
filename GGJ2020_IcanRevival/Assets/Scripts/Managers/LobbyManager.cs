@@ -7,7 +7,7 @@ public class LobbyManager : MonoBehaviour
 {
     public float zoneOpacity = 0.1f;
     public List<PlayerZone> playersZones = new List<PlayerZone>();
-    
+        
     public void Init()
     {
         for (int i = 0; i < playersZones.Count; i++)

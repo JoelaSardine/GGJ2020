@@ -66,6 +66,8 @@ public class Interactable : MonoBehaviour
        
     public void Grab(PlayerController player)
     {
+        GameManager.Instance.PlaySound(SoundEvent.Grab);
+
         holder = player;
         isHolded = true;
 
@@ -74,8 +76,10 @@ public class Interactable : MonoBehaviour
         rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 
-    public void Drop()
+    public void Drop(bool isThrowed = false)
     {
+        GameManager.Instance.PlaySound(isThrowed ? SoundEvent.Throw : SoundEvent.Drop);
+        
         Batman(holder.holded.transform);
         holder.holded = null;
         holder = null;

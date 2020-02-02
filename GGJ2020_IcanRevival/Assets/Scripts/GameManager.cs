@@ -44,7 +44,9 @@ public class GameManager : MonoBehaviour
     private void Init()
     {
         GameManager.Instance = this;
-        
+
+        GetComponentInChildren<InControl.InControlManager>().enabled = true;
+
         ChangePhase(gamePhase);
 
         if (!playersManager.isInitialized)

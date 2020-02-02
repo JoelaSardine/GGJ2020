@@ -101,20 +101,17 @@ public class PlayerController : MonoBehaviour
     {
         if (device.Action3 && miniGame.enabled) miniGame.ReceiveInput(true);
 
-        if (device.Action1 != inputStatus[inputName.Grab])
+        if (device.Action1.HasChanged)
         {
-            inputStatus[inputName.Grab] = device.Action1;
-            OnGrabButton(inputStatus[inputName.Grab]);
+            OnGrabButton(device.Action1.WasPressed);
         }
-        if (device.Action3 != inputStatus[inputName.Use])
+        if (device.Action3.HasChanged)
         {
-            inputStatus[inputName.Use] = device.Action3;
-            OnUseButton(inputStatus[inputName.Use]);
+            OnUseButton(device.Action3.WasPressed);
         }
-        if (device.RightBumper != inputStatus[inputName.Throw])
+        if (device.RightBumper.HasChanged)
         {
-            inputStatus[inputName.Throw] = device.RightBumper;
-            OnThrowButton(inputStatus[inputName.Throw]);
+            OnThrowButton(device.RightBumper.WasPressed);
         }
 
         if (movementEnabled)

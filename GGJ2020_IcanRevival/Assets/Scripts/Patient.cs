@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 using UnityEngine.UI;
 
 public class Patient : Interactable
@@ -9,6 +10,7 @@ public class Patient : Interactable
     public float AvoidRadius;
     public int Health = 3;
     public float HealthDecreaseSpeed = 10;
+    public GameObject EmergencyObj;
     public Sickness sickness;
 
     private Item item;
@@ -26,6 +28,7 @@ public class Patient : Interactable
 
     private void Start()
     {
+        EmergencyObj.transform.DOShakeRotation(5, 20).SetLoops(-1);
         rb = GetComponent<Rigidbody2D>();
         avoidMask = new ContactFilter2D();
         avoidMask.useLayerMask = true;
@@ -39,6 +42,8 @@ public class Patient : Interactable
 
     public void Update()
     {
+        if (holder != null) moveTarget = null;
+
         if (moveTarget.HasValue) MoveUpdate();
         else AvoidUpdate();
 
@@ -125,6 +130,10 @@ public class Patient : Interactable
             healed = true;
             label.text = "Healed";
             animator.SetBool("Healed", true);
+            if (sickness.Urgente)
+            {
+                EmergencyObj.SetActive(false);
+            }
             item?.Used();
             GameManager.Instance.levelManager.HealPatient();
         }
@@ -133,6 +142,10 @@ public class Patient : Interactable
         {
             enabled = false;
             label.text = "Dead";
+            if (sickness.Urgente)
+            {
+                EmergencyObj.SetActive(false);
+            }
             GameManager.Instance.levelManager.KillPatient();
         }
 

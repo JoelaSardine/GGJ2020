@@ -47,6 +47,14 @@ public class PlayersManager : MonoBehaviour
         }
     }
 
+    public void OnNewLevel(LevelManager levelManager)
+    {
+        for (int i = 0; i < players.Count; i++)
+        {
+            players[i].transform.position = levelManager.spawns[i].position;
+        }
+    }
+
     private void Update()
     {
         switch (GameManager.Instance.gamePhase)

@@ -1304,8 +1304,8 @@ MonoBehaviour:
 
     If too many patients die, you lose.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8c24fe88c7b2e1d4db2985884065e03d, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8c24fe88c7b2e1d4db2985884065e03d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2051,8 +2051,8 @@ MonoBehaviour:
     Use
     them on patients or machines with <b>Right Click</b> or <color=blue>X</color>.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8c24fe88c7b2e1d4db2985884065e03d, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8c24fe88c7b2e1d4db2985884065e03d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2401,8 +2401,8 @@ MonoBehaviour:
     machines will only work if you have the correct item in your hands. \n\nYou can
     repair broken machines with the wrench."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8c24fe88c7b2e1d4db2985884065e03d, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8c24fe88c7b2e1d4db2985884065e03d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2643,8 +2643,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: EMERGENCY ROOM
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8c24fe88c7b2e1d4db2985884065e03d, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8c24fe88c7b2e1d4db2985884065e03d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4339,8 +4339,8 @@ MonoBehaviour:
 
     CLEAR'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8c24fe88c7b2e1d4db2985884065e03d, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8c24fe88c7b2e1d4db2985884065e03d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5951,8 +5951,8 @@ MonoBehaviour:
     Oh.
     And beds are useless for now.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8c24fe88c7b2e1d4db2985884065e03d, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8c24fe88c7b2e1d4db2985884065e03d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6134,12 +6134,12 @@ PrefabInstance:
     - target: {fileID: 5935471660180097477, guid: 86f124b45133f6748b6b2319afbc4b5b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5935471660180097477, guid: 86f124b45133f6748b6b2319afbc4b5b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 5935471660846113635, guid: 86f124b45133f6748b6b2319afbc4b5b,
         type: 3}
@@ -6279,7 +6279,7 @@ PrefabInstance:
     - target: {fileID: 5935471661536700066, guid: 86f124b45133f6748b6b2319afbc4b5b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5935471661536700066, guid: 86f124b45133f6748b6b2319afbc4b5b,
         type: 3}
@@ -6289,12 +6289,12 @@ PrefabInstance:
     - target: {fileID: 5935471661659657871, guid: 86f124b45133f6748b6b2319afbc4b5b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5935471661659657871, guid: 86f124b45133f6748b6b2319afbc4b5b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 5935471661979612526, guid: 86f124b45133f6748b6b2319afbc4b5b,
         type: 3}
@@ -6304,7 +6304,7 @@ PrefabInstance:
     - target: {fileID: 5935471661979612526, guid: 86f124b45133f6748b6b2319afbc4b5b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: -4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86f124b45133f6748b6b2319afbc4b5b, type: 3}

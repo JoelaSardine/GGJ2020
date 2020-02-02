@@ -3935,7 +3935,7 @@ PrefabInstance:
     - target: {fileID: 1042047296357002376, guid: 7066c1e72a5e59c4284b4b444c2535a1,
         type: 3}
       propertyPath: brokenChance
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6006964197881883424, guid: 7066c1e72a5e59c4284b4b444c2535a1,
         type: 3}
@@ -12675,7 +12675,7 @@ PrefabInstance:
     - target: {fileID: 2993470579354520291, guid: 6164c6965edd01946bbf9c96cb2c5889,
         type: 3}
       propertyPath: brokenChance
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8404262004268502347, guid: 6164c6965edd01946bbf9c96cb2c5889,
         type: 3}
@@ -13929,7 +13929,7 @@ PrefabInstance:
     - target: {fileID: 2028382332872601329, guid: 86f124b45133f6748b6b2319afbc4b5b,
         type: 3}
       propertyPath: sicknesses.Array.data[3].weight
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2028382332872601329, guid: 86f124b45133f6748b6b2319afbc4b5b,
         type: 3}
@@ -17295,6 +17295,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1799854550}
     m_Modifications:
+    - target: {fileID: 475270245434532865, guid: 37b11b12a8b44c44db56c295d90068f4,
+        type: 3}
+      propertyPath: brokenChance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6607732448250749865, guid: 37b11b12a8b44c44db56c295d90068f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17910,6 +17915,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Suppository dispenser
       objectReference: {fileID: 0}
+    - target: {fileID: 8692414928969227701, guid: 19b15410d15f4b34290d690aace695cf,
+        type: 3}
+      propertyPath: ItemToSpawn
+      value: 
+      objectReference: {fileID: 1705705393536530866, guid: b9d83990ff2b1194794300df5644266b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19b15410d15f4b34290d690aace695cf, type: 3}
 --- !u!1001 &7024695239042810395

@@ -40,7 +40,7 @@ PrefabInstance:
     - target: {fileID: 2993470579354520291, guid: 6164c6965edd01946bbf9c96cb2c5889,
         type: 3}
       propertyPath: brokenChance
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2993470579354520291, guid: 6164c6965edd01946bbf9c96cb2c5889,
         type: 3}
@@ -50,7 +50,7 @@ PrefabInstance:
     - target: {fileID: 2993470579354520291, guid: 6164c6965edd01946bbf9c96cb2c5889,
         type: 3}
       propertyPath: argument
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2993470579354520291, guid: 6164c6965edd01946bbf9c96cb2c5889,
         type: 3}

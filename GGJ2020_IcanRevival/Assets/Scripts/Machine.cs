@@ -8,15 +8,13 @@ public class Machine : Interactable
     public MiniGameType repairGame;
     public float repairArgument;
     public UnityEvent OnRepairFinished;
+    public int brokenChance = 3;
 
     public ItemType ItemRequired;
     public bool broken;
 
-    private string pastName;
-
     public virtual void Start()
     {
-        pastName = gameObject.name;
         OnRepairFinished.AddListener(RepairEvent);
         StartCoroutine(CheckForBroken());
     }
@@ -36,14 +34,14 @@ public class Machine : Interactable
     {
         broken = false;
 
-        ChangeName(pastName);
+        ChangeName(this.gameObject.name);
     }
 
     IEnumerator CheckForBroken()
     {
         while(true)
         {
-            if (Random.Range(0, 100) > 97)
+            if (Random.Range(0, 100) > 100-brokenChance)
             {
                 broken = true;
                 ChangeName("Broken");

@@ -20,8 +20,6 @@ public class Interactable : MonoBehaviour
 
     private int baseLayer;
 
-    private bool isDirty;
-
     private void Awake()
     {
         label = GetComponentInChildren<TextMeshProUGUI>();
@@ -32,20 +30,6 @@ public class Interactable : MonoBehaviour
         collider = GetComponent<Collider2D>();
 
         baseLayer = this.gameObject.layer;
-
-        UnityEngine.SceneManagement.SceneManager.sceneUnloaded += OnSceneUnload;
-    }
-
-    private void OnSceneUnload(UnityEngine.SceneManagement.Scene current)
-    {
-        if (isHolded)
-        {
-            Drop();
-        }
-        if (isDirty)
-        {
-            Destroy(gameObject);
-        }
     }
 
     private void Update()
@@ -86,8 +70,6 @@ public class Interactable : MonoBehaviour
        
     public void Grab(PlayerController player)
     {
-        isDirty = true;
-
         GameManager.Instance.PlaySound(SoundEvent.Grab);
 
         holder = player;
@@ -117,6 +99,7 @@ public class Interactable : MonoBehaviour
     /// <summary>Helper function that kill all parents of the target</summary>
     private void Batman(Transform target)
     {
+        target.parent = GameObject.Find("Items").transform;
         target.parent = null;
     }
 
@@ -130,6 +113,5 @@ public class Interactable : MonoBehaviour
             rigidbody.AddForce(dir);
             yield return new WaitForFixedUpdate();
         }
-
     }
 }

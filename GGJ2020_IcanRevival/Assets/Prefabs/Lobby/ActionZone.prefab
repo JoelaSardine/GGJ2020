@@ -132,7 +132,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.5}
+  m_Size: {x: 3, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &6298664950178193963
 MonoBehaviour:
@@ -146,9 +146,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02af7160cd2de34bb6676fb86945a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playersIn: 0
-  fillAmount: 0
+  action: 0
+  arg: 0
   fillImage: {fileID: 2993225191696903164}
+  fillTime: 2
+  unfillTime: 0.5
+  playersIn: 0
 --- !u!1 &6267077725305257528
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,7 +383,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 3, y: 1.5}
+  m_Size: {x: 4, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -424,7 +427,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 150}
+  m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1067910641450009413
 Canvas:

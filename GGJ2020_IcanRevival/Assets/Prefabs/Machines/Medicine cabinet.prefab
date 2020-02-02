@@ -58,8 +58,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f53257419446d54cb30182867083bba, type: 2}
-  - {fileID: 2100000, guid: 3f53257419446d54cb30182867083bba, type: 2}
+  - {fileID: 2100000, guid: 98b68e005a025a74498be40730e8b9f0, type: 2}
+  - {fileID: 2100000, guid: 98b68e005a025a74498be40730e8b9f0, type: 2}
   - {fileID: 2100000, guid: 3f53257419446d54cb30182867083bba, type: 2}
   - {fileID: 2100000, guid: 3f53257419446d54cb30182867083bba, type: 2}
   m_StaticBatchInfo:
@@ -185,7 +185,7 @@ MonoBehaviour:
   collider: {fileID: 0}
   rigidbody: {fileID: 701422540425426608}
   game: 2
-  argument: 10
+  argument: 20
   ItemToSpawn: {fileID: 5391386811835351380, guid: 7e17b5104415a874bb129135279e8a55,
     type: 3}
   OnFinished:

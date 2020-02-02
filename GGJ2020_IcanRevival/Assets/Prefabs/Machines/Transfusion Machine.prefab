@@ -552,7 +552,10 @@ MonoBehaviour:
   collider: {fileID: 0}
   rigidbody: {fileID: 8404262004268502345}
   repairGame: 2
-  repairArgument: 10
+  repairArgument: 20
+  OnRepairFinished:
+    m_PersistentCalls:
+      m_Calls: []
   ItemRequired: 6
   broken: 0
   game: 1

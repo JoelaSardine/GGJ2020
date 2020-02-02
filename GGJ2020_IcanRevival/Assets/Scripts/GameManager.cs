@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum GamePhase { None, Game, Lobby }
 
@@ -16,22 +17,24 @@ public class GameManager : MonoBehaviour
     public LobbyManager lobbyManager;
     public LevelManager levelManager;
 
+    private bool waitForLoad = true;
+
     private void Awake()
     {
         if (GameManager.Instance != null)
         {
+            if (playersManager)
+                Destroy(playersManager.gameObject);
+
             if (lobbyManager)
                 GameManager.Instance.lobbyManager = lobbyManager;
+
             if (levelManager)
             {
                 GameManager.Instance.levelManager = levelManager;
                 levelManager.Init();
+                GameManager.Instance.playersManager.OnNewLevel(levelManager);
             }
-
-
-
-            if (playersManager)
-                Destroy(playersManager.gameObject);
             
             Destroy(this.gameObject);
         }
@@ -83,6 +86,12 @@ public class GameManager : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void LaunchScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+        GameManager.Instance.ChangePhase(GamePhase.Game);
     }
 
     private void Update()

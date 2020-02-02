@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ActionZone : MonoBehaviour
@@ -81,7 +80,6 @@ public class ActionZone : MonoBehaviour
 
     public void LaunchLevel(int arg)
     {
-        SceneManager.LoadScene("Level " + arg);
-        GameManager.Instance.ChangePhase(GamePhase.Game);
+        GameManager.Instance.LaunchScene("Level " + arg);
     }
 }

@@ -8,12 +8,12 @@ using UnityEngine.Events;
 public enum SicknessType
 {
     None,
-    CancerDuCul,
+    AnalCancer,
     Coronavirus,
-    FlemmingiteAigue,
-    CriseCardiaque,
-    PriseDeSang,
-    Grippe,
+    Fever,
+    HeartAttack,
+    Transfusion,
+    Influenza,
 }
 
 [Serializable]

@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c2ac992bd3633945bcae53e0978ddab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayRangeBetweenSpawn: {x: 0, y: 2}
+  DelayRangeBetweenSpawn: {x: 5, y: 15}
   MaxPatientSpawn: 5
   TargetFinder: {fileID: 280528935}
   Container: {fileID: 55785169}
@@ -743,7 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c2ac992bd3633945bcae53e0978ddab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayRangeBetweenSpawn: {x: 0, y: 2}
+  DelayRangeBetweenSpawn: {x: 5, y: 15}
   MaxPatientSpawn: 5
   TargetFinder: {fileID: 1831584329}
   Container: {fileID: 55785169}
@@ -1961,7 +1961,7 @@ PrefabInstance:
     - target: {fileID: 4768890628864862667, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6284572434838058434, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
@@ -3851,7 +3851,7 @@ PrefabInstance:
     - target: {fileID: 4768890628864862667, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6284572434838058434, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
@@ -4842,7 +4842,7 @@ PrefabInstance:
     - target: {fileID: 4768890628864862667, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6284572434838058434, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
@@ -5637,7 +5637,7 @@ PrefabInstance:
     - target: {fileID: 4768890628864862667, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6284572434838058434, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
@@ -5910,7 +5910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c2ac992bd3633945bcae53e0978ddab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayRangeBetweenSpawn: {x: 0, y: 2}
+  DelayRangeBetweenSpawn: {x: 5, y: 15}
   MaxPatientSpawn: 5
   TargetFinder: {fileID: 860368413}
   Container: {fileID: 55785169}
@@ -6353,7 +6353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c2ac992bd3633945bcae53e0978ddab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayRangeBetweenSpawn: {x: 0, y: 2}
+  DelayRangeBetweenSpawn: {x: 5, y: 15}
   MaxPatientSpawn: 5
   TargetFinder: {fileID: 508007300}
   Container: {fileID: 55785169}
@@ -7382,29 +7382,29 @@ MonoBehaviour:
         m_Calls: []
   - name: 2
     cure: 2
-    gameType: 0
-    gameArgument: 0
+    gameType: 3
+    gameArgument: 8
     OnCure:
       m_PersistentCalls:
         m_Calls: []
   - name: 3
     cure: 1
-    gameType: 0
-    gameArgument: 0
+    gameType: 3
+    gameArgument: 4
     OnCure:
       m_PersistentCalls:
         m_Calls: []
   - name: 4
     cure: 4
-    gameType: 0
-    gameArgument: 0
+    gameType: 2
+    gameArgument: 10
     OnCure:
       m_PersistentCalls:
         m_Calls: []
   - name: 5
     cure: 5
-    gameType: 0
-    gameArgument: 8
+    gameType: 3
+    gameArgument: 4
     OnCure:
       m_PersistentCalls:
         m_Calls: []
@@ -9120,7 +9120,7 @@ PrefabInstance:
     - target: {fileID: 4768890628864862667, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6284572434838058434, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}

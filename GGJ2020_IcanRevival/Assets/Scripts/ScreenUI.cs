@@ -12,11 +12,12 @@ public class ScreenUI : MonoBehaviour
     private void Start()
     {
         camera = Camera.main;
+        //GetComponentInParent<Canvas>().gameObject.AddComponent<CanvasManager>();    
     }
 
     private void Update()
     {
-        Vector3 worldtoScreen = camera.WorldToScreenPoint(worldObjectToFollow.position);
+        Vector3 worldtoScreen = Camera.main.WorldToScreenPoint(worldObjectToFollow.position);
         transform.position = worldtoScreen + offset;
     }
 }

@@ -2247,6 +2247,7 @@ GameObject:
   - component: {fileID: 541027899}
   - component: {fileID: 541027898}
   - component: {fileID: 541027897}
+  - component: {fileID: 541027901}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2336,6 +2337,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &541027901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541027896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd63956554267342a416ef0a7c8d9ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &548612752 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2942777179943824840, guid: 5d1d35a48a6f24a42a545f770e89be20,
@@ -5919,7 +5932,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You can also throw items over fences with <b>Middle Click</b> or <color=red>B</color>.
+  m_text: 'You can also throw items over fences with <b>Middle Click</b> or <color=yellow>Y</color>.
 
 
     Oh.

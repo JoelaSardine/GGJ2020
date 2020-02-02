@@ -551,7 +551,10 @@ MonoBehaviour:
   weight: 1
   collider: {fileID: 0}
   rigidbody: {fileID: 8404262004268502345}
+  repairGame: 2
+  repairArgument: 10
   ItemRequired: 6
+  broken: 0
   game: 1
   argument: 4
   newItemType: 5

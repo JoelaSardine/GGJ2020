@@ -561,8 +561,7 @@ MonoBehaviour:
   game: 1
   argument: 4
   newItemType: 5
-  newItemSprite: {fileID: -4837880273006261914, guid: f4be18d36cc66b34e8192ac5e7f5115d,
-    type: 3}
+  newItemMat: {fileID: 2100000, guid: c6b94e1b1548dd44d82153fc27c34979, type: 2}
   newItemName: Blood bag
   OnFinished:
     m_PersistentCalls:

@@ -8,6 +8,7 @@ public class Machine : Interactable
     public MiniGameType repairGame;
     public float repairArgument;
     public UnityEvent OnRepairFinished;
+    public int brokenChance = 3;
 
     public ItemType ItemRequired;
     public bool broken;
@@ -40,7 +41,7 @@ public class Machine : Interactable
     {
         while(true)
         {
-            if (Random.Range(0, 100) > 97)
+            if (Random.Range(0, 100) > 100-brokenChance)
             {
                 broken = true;
                 ChangeName("Broken");

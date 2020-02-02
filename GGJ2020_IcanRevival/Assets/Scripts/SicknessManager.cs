@@ -20,7 +20,7 @@ public class Sickness
 {
     public SicknessType name;
     public ItemType cure;
-    public CureMiniGame gameType;
+    public MiniGameType gameType;
     public float gameArgument;
 
     public UnityEvent OnCure;
@@ -36,7 +36,7 @@ public class Sickness
 
     public void TryCure(ItemType itemUsed, PlayerController player)
     {
-        if(cure == itemUsed) player.miniGame.SetMiniGame(this, gameType, gameArgument);
+        if(cure == itemUsed) player.miniGame.SetMiniGame(OnCure, gameType, gameArgument);
     }
 }
 

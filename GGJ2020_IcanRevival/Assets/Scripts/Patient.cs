@@ -9,7 +9,9 @@ public class Patient : Interactable
     public float AvoidRadius;
     public int Health = 3;
     public float HealthDecreaseSpeed = 10;
-    public Sickness sickness; 
+    public Sickness sickness;
+
+    private Item item;
 
     public Vector2? moveTarget;
 
@@ -57,7 +59,7 @@ public class Patient : Interactable
 
     public override void InteractWithItem(Interactable itemHolded)
     {
-        Item item = itemHolded as Item;
+        item = itemHolded as Item;
 
         if (itemHolded != null && enabled && !healed)
         {
@@ -115,6 +117,10 @@ public class Patient : Interactable
         {
             healed = true;
             label.text = "Healed";
+            animator.SetBool("Healed", true);
+
+            ItemResetable itemResetable = item as ItemResetable;
+            itemResetable?.ResetItem();
         }
 
         if(Health == 0)

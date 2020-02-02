@@ -2355,7 +2355,7 @@ PrefabInstance:
     - target: {fileID: 4768890628864862667, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6284572434838058434, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
@@ -5319,6 +5319,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1803088065}
     m_Modifications:
+    - target: {fileID: 8564505308952423931, guid: c78d78ef4038e9443a5d2f006af2e9b6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8564505309835123824, guid: c78d78ef4038e9443a5d2f006af2e9b6,
         type: 3}
       propertyPath: gamePhase
@@ -6130,7 +6135,7 @@ PrefabInstance:
     - target: {fileID: 4768890628864862667, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6284572434838058434, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
@@ -7434,7 +7439,7 @@ PrefabInstance:
     - target: {fileID: 4768890628864862667, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6284572434838058434, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
@@ -8310,7 +8315,7 @@ PrefabInstance:
     - target: {fileID: 4768890628864862667, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6284572434838058434, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
@@ -13348,7 +13353,7 @@ PrefabInstance:
     - target: {fileID: 4768890628864862667, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6284572434838058434, guid: 5fe5a3e2f25f9274bb4c1db7547748ea,
         type: 3}

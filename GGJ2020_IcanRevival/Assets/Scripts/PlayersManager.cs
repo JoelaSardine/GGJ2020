@@ -54,6 +54,16 @@ public class PlayersManager : MonoBehaviour
             players[i].transform.position = levelManager.spawns[i].position;
         }
     }
+    public void OnBackToLobby(LobbyManager lobbyManager)
+    {
+        for (int i = 0; i < players.Count; i++)
+        {
+            players[i].transform.position = lobbyManager.playersZones[i].spawnPos;
+            lobbyManager.playersZones[i].Enable(players[i]);
+        }
+
+
+    }
 
     private void Update()
     {

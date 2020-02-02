@@ -27,7 +27,11 @@ public class GameManager : MonoBehaviour
                 Destroy(playersManager.gameObject);
 
             if (lobbyManager)
+            {
                 GameManager.Instance.lobbyManager = lobbyManager;
+                lobbyManager.Init();
+                GameManager.Instance.playersManager.OnBackToLobby(lobbyManager);
+            }
 
             if (levelManager)
             {
@@ -58,6 +62,11 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             DontDestroyOnLoad(playersManager.gameObject);
         }
+
+        if (lobbyManager)
+        {
+            lobbyManager.Init();
+        }
     }
 
     public void ChangePhase(GamePhase newPhase)
@@ -75,12 +84,12 @@ public class GameManager : MonoBehaviour
                 break;
 
             case GamePhase.Lobby:
-                if (lobbyManager == null || playersManager == null)
+                /*if (lobbyManager == null || playersManager == null)
                 {
                     Debug.LogError("Please link LobbyManager and PlayersManager !");
                     return;
                 }
-                lobbyManager.Init();
+                lobbyManager.Init();*/
                 break;
 
             default:
@@ -96,5 +105,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F1))
+        {
+            SceneManager.LoadScene("Lobby");
+            GameManager.Instance.ChangePhase(GamePhase.Lobby);
+        }
     }
 }

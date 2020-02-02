@@ -10,8 +10,9 @@ public enum ItemType
     Seringe,
     SupositoirChimioterapique,
     Defibrilateur,
-    Sang
-    
+    Sang,
+    PocheVide,
+    SeringeVide,
 }
 
 public class Item : Interactable

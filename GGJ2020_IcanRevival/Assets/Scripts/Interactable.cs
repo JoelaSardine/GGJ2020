@@ -21,6 +21,7 @@ public class Interactable : MonoBehaviour
     private void Awake()
     {
         label = GetComponentInChildren<TextMeshProUGUI>();
+        label.text = gameObject.name;
         UpdateHoverStatus();
 
         rigidbody = GetComponent<Rigidbody2D>();
@@ -39,6 +40,12 @@ public class Interactable : MonoBehaviour
     public virtual void Interact(PlayerController player)
     {
 
+    }
+
+    public void ChangeName(string newName)
+    {
+        gameObject.name = newName;
+        label.text = newName;
     }
 
     public virtual void Hover(bool state)

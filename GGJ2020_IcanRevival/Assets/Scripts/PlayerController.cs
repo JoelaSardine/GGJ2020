@@ -179,6 +179,7 @@ public class PlayerController : MonoBehaviour
         if (holded != null)
         {
             holded.Drop();
+            interactionCollider.isTrigger = true;
         }
 
         if (dropOnly) return;
@@ -187,6 +188,7 @@ public class PlayerController : MonoBehaviour
         {
             hovered.Hover(false);
             Grab(hovered);
+            interactionCollider.isTrigger = false;
             hoveredList.Remove(holded);
 
         }
@@ -233,8 +235,10 @@ public class PlayerController : MonoBehaviour
     {
         if (holded != null)
         {
+            interactionCollider.isTrigger = true;
             StartCoroutine(holded.ThrowCoroutine(this));
             holded.Drop();
+            
         }
     }
 

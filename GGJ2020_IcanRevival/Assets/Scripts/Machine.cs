@@ -13,8 +13,11 @@ public class Machine : Interactable
     public ItemType ItemRequired;
     public bool broken;
 
+    private string startName;
+
     public virtual void Start()
     {
+        startName = gameObject.name;
         OnRepairFinished.AddListener(RepairEvent);
         StartCoroutine(CheckForBroken());
     }
@@ -34,7 +37,7 @@ public class Machine : Interactable
     {
         broken = false;
 
-        ChangeName(this.gameObject.name);
+        ChangeName(startName);
     }
 
     IEnumerator CheckForBroken()

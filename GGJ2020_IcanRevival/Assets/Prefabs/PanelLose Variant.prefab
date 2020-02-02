@@ -62,6 +62,11 @@ PrefabInstance:
       propertyPath: m_text
       value: Too many patients have died !
       objectReference: {fileID: 0}
+    - target: {fileID: 243328033052881440, guid: c0fb33efe42d4534aa3cd03a2988a4c5,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 1089281860003526817, guid: c0fb33efe42d4534aa3cd03a2988a4c5,
         type: 3}
       propertyPath: m_Name
@@ -347,15 +352,21 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7064961230877529211, guid: c0fb33efe42d4534aa3cd03a2988a4c5,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7447579344273127819, guid: c0fb33efe42d4534aa3cd03a2988a4c5,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: ebe790d3b62981442be7b0b2af556a6d,
+        type: 3}
     - target: {fileID: 7447579344273127819, guid: c0fb33efe42d4534aa3cd03a2988a4c5,
         type: 3}
       propertyPath: m_Type
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7447579344273127819, guid: c0fb33efe42d4534aa3cd03a2988a4c5,
         type: 3}

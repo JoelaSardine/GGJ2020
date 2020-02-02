@@ -13602,6 +13602,36 @@ PrefabInstance:
       propertyPath: sicknesses.Array.data[2].gameArgument
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2028382332872601329, guid: 86f124b45133f6748b6b2319afbc4b5b,
+        type: 3}
+      propertyPath: sicknesses.Array.data[0].weight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028382332872601329, guid: 86f124b45133f6748b6b2319afbc4b5b,
+        type: 3}
+      propertyPath: sicknesses.Array.data[1].weight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028382332872601329, guid: 86f124b45133f6748b6b2319afbc4b5b,
+        type: 3}
+      propertyPath: sicknesses.Array.data[2].weight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028382332872601329, guid: 86f124b45133f6748b6b2319afbc4b5b,
+        type: 3}
+      propertyPath: sicknesses.Array.data[4].weight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028382332872601329, guid: 86f124b45133f6748b6b2319afbc4b5b,
+        type: 3}
+      propertyPath: sicknesses.Array.data[5].weight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2028382332872601329, guid: 86f124b45133f6748b6b2319afbc4b5b,
+        type: 3}
+      propertyPath: sicknesses.Array.data[3].weight
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5935471660180097477, guid: 86f124b45133f6748b6b2319afbc4b5b,
         type: 3}
       propertyPath: m_LocalPosition.y

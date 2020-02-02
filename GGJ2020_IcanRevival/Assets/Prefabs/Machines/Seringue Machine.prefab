@@ -16,7 +16,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 86128a6a2a7d67040bcec9957d9df088, type: 2}
+      objectReference: {fileID: 2100000, guid: d72e57591994cd44f86d1f3d6a4f8306, type: 2}
+    - target: {fileID: 1886349848029713853, guid: 6164c6965edd01946bbf9c96cb2c5889,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c23859733d4bb6849bfb7b979681a6fa, type: 2}
+    - target: {fileID: 1886349848029713853, guid: 6164c6965edd01946bbf9c96cb2c5889,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: d72e57591994cd44f86d1f3d6a4f8306, type: 2}
     - target: {fileID: 2993470579354520291, guid: 6164c6965edd01946bbf9c96cb2c5889,
         type: 3}
       propertyPath: game

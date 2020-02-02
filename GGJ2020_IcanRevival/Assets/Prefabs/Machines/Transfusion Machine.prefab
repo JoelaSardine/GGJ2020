@@ -341,12 +341,12 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 2100000, guid: c6b94e1b1548dd44d82153fc27c34979, type: 2}
+  - {fileID: 2100000, guid: 19127c8ca1094e347a305b83c6bca9e0, type: 2}
+  - {fileID: 2100000, guid: af0a821aa45691342b072eb01780804b, type: 2}
+  - {fileID: 2100000, guid: f944dd933e198a642b027886ad3b21bf, type: 2}
   - {fileID: 2100000, guid: aabe373a5e276024aaa0907f877b00bc, type: 2}
-  - {fileID: 2100000, guid: 984e42646eba20f42bdd29f80a59a736, type: 2}
-  - {fileID: 2100000, guid: aabe373a5e276024aaa0907f877b00bc, type: 2}
-  - {fileID: 2100000, guid: a46d37e3cb0ede04c8444f552726bda6, type: 2}
-  - {fileID: 2100000, guid: aabe373a5e276024aaa0907f877b00bc, type: 2}
-  - {fileID: 2100000, guid: b63bca556f7fb80418ca8de7a4332c69, type: 2}
+  - {fileID: 2100000, guid: c6b94e1b1548dd44d82153fc27c34979, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -552,6 +552,7 @@ MonoBehaviour:
   collider: {fileID: 0}
   rigidbody: {fileID: 8404262004268502345}
   ItemRequired: 6
+  broken: 0
   game: 1
   argument: 4
   newItemType: 5

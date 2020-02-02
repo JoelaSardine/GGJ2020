@@ -42,6 +42,11 @@ public class Interactable : MonoBehaviour
 
     }
 
+    public virtual void Used()
+    {
+
+    }
+
     public void ChangeName(string newName)
     {
         gameObject.name = newName;

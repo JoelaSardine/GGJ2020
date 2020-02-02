@@ -118,9 +118,7 @@ public class Patient : Interactable
             healed = true;
             label.text = "Healed";
             animator.SetBool("Healed", true);
-
-            ItemResetable itemResetable = item as ItemResetable;
-            itemResetable?.ResetItem();
+            item.Used();
         }
 
         if(Health == 0)

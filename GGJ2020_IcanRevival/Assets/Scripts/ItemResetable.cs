@@ -8,7 +8,7 @@ public class ItemResetable : Item
     public Sprite newItemSprite;
     public string newItemName;
 
-    public void ResetItem()
+    public override void Used()
     {
         type = newItemType;
         GetComponentInChildren<SpriteRenderer>().sprite = newItemSprite;

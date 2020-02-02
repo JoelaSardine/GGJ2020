@@ -5,6 +5,7 @@ using UnityEngine;
 public class Machine : Interactable
 {
     public ItemType ItemRequired;
+    public bool broken;
 
     public override void InteractWithItem(Interactable itemHolded)
     {

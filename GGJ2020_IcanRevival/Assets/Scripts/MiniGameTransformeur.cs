@@ -27,7 +27,7 @@ public class MiniGameTransformeur : Machine
         if (broken == false)
         {
             item = itemHolded as Item;
-            if (item.type == ItemRequired)
+            if (item != null && item.type == ItemRequired)
             {
                 PlayerController player = itemHolded.holder;
                 player.miniGame.SetMiniGame(OnFinished, game, argument );
@@ -36,7 +36,7 @@ public class MiniGameTransformeur : Machine
         else
         {
             item = itemHolded as Item;
-            if (item.type == ItemType.ClefAMolette)
+            if (item != null && item.type == ItemType.ClefAMolette)
             {
                 PlayerController player = itemHolded.holder;
                 player.miniGame.SetMiniGame(OnRepairFinished, repairGame, repairArgument);
